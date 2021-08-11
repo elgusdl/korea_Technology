@@ -1,0 +1,439 @@
+@charset "utf-8";
+@import '_common.scss';
+@import '_mixin.scss';
+
+main{
+    div{
+        section{
+            display: block;
+            .about{
+                background: url(../img/aboutus/sub_visual1.jpg) no-repeat center;
+                background-size: cover;
+
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 600px;
+                .ab_title{
+                    text-align: center;
+                    padding-top: 45px;
+                    z-index: 10;
+                    word-break: keep-all;
+                    h2::before{
+                        display: block;
+                        content: "";
+                        width: 60px;
+                        height: 1px;
+                        margin: 0 auto 20px;
+                        background: rgba(255,255,255,0.4);
+                    }
+                    h2{
+                        font-family: "Roboto";
+                        font-size: 66px;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                    p{
+                        margin-top: 20px;
+                        font-size: 19px;
+                        color: rgba(255,255,255,1);
+                        line-height: 170%;
+                    }
+                }
+                .ab_sub{
+                    position: absolute;
+                    left: 0;
+                    top: calc(100% - 70px);
+                    z-index: 100;
+                    width: 100%;
+                    background: rgba(0,0,0,0.4);
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+                        max-width: 1320px;
+                        width: 100%;
+                        margin: 0 auto;
+                        li{
+                            width: 20%;
+                            position: relative;
+                            a{
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 70px;
+                                font-size: 17px;
+                                color: #fff;
+                                span{
+                                    position: relative;
+                                    figure{
+                                        opacity: 0;
+                                        position: absolute;
+                                        right: 100%;
+                                        top: -1px;
+                                        width: 18px;
+                                        margin-right: 5px;
+                                        img{}
+                                    }
+                                }
+                            }
+                        }
+                        li::after{
+                            display: block;
+                            content: "";
+                            width: 1px; height: 14px;
+                            background: rgba(255,255,255,0.2);
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            margin-top: -7px;
+                        }
+                    }
+                    ul::after{
+                        display: block;
+                        content: "";
+                        width: 1px; height: 14px;
+                        background: rgba(255,255,255,0.2);
+                        position: absolute;
+                        left: 0; top: 50%;
+                        margin-top: -7px;
+                    }
+                }
+            }
+        }
+        .ab_tabs{
+            margin: 50px auto 0;
+            text-align: center;
+            div{
+                display: inline-block;
+                position: relative;
+                padding: 0 16px;
+                .l_line{
+                    > div:nth-child(1){
+                        display: block;
+                        content: "";
+                        width: 1px; height: 1px;
+                        background: #bbb;
+                        position: absolute;
+                        left: 0; top: 12px;
+                        transform: rotate( 40deg) translate(3px,-8px);
+                    }
+                    > div:nth-child(2){
+                        display: block;
+                        content: "";
+                        width: 1px; height: 1px;
+                        background: #bbb;
+                        position: absolute;
+                        left: 0; top: 15px;
+                    }
+                    > div:nth-child(3){
+                        display: block;
+                        content: "";
+                        width: 1px; height: 1px;
+                        background: #bbb;
+                        position: absolute;
+                        left: 0; bottom: 26px;
+                        transform: rotate(-40deg) translate(3px,8px);
+                    }
+                }
+                ul{
+                    display: inline-flex;
+                    padding: 3px 0px;
+                    box-sizing: border-box;
+                    border-top: 1px solid #bbb;
+                    border-bottom: 1px solid #bbb;
+                    li{
+                        width: 190px;
+                        a{
+                            background: #03569f;
+                            color: #fff;
+
+                            display: block;
+                            position: relative;
+                            font-size: 17px;
+                            line-height: 48px;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .r_line{
+                    > div:nth-child(1){
+                        display:block;
+                        content: "";
+                        width:1px; height:1px;
+                        background:#bbb;
+                        position:absolute;
+                        right:0; top:0;
+                        transform:rotate(-46deg) translate(-3px,-8px);
+                    }
+                    > div:nth-child(2){
+                        display:block;
+                        content: "";
+                        width:1px; height:1px;
+                        background:#bbb;
+                        position:absolute;
+                        right:0; top:15px;
+                    }
+                    > div:nth-child(3){
+                        display:block;
+                        content: "";
+                        width:1px; height:1px;
+                        background:#bbb;
+                        position:absolute;
+                        right:0; bottom:0;
+                        transform:rotate(46deg) translate(-3px,8px);
+                    }
+                }
+            }
+        }
+        .ab_con{
+            padding-top: 115px;
+            background: url(../img/aboutus/m11_bg1.jpg) no-repeat center bottom;
+            background-size: contain !important;
+            h3{
+                font-size: 46px;
+                color: #222;
+                font-weight: 600;
+                text-align: center;
+            }
+            .page_color{
+                margin: 45px 0 75px;
+                font-family: "NanumSquare_acB";
+                font-size: 36px;
+                color: #333;
+                text-align: center;
+                .page_txt{
+                    display: inline-block;
+                    line-height: 150%;
+                    text-align: left;
+
+                    transform: translateY(0px);
+                    opacity: 1;
+
+                    strong{
+                        font-family: "NanumSquare_acEB";
+                        color: #03569f;
+                    }
+                    img{
+                        display: inline-block;
+                        vertical-align: top;
+                        width: auto;
+                        height: 35px;
+                        margin: 9px 0 0 10px;
+                    }
+                }
+            }
+            .section1::before{
+                display: block;
+                content: "";
+                width: 100%; height: 35%;
+                background: #f8f8f8;
+                position: absolute;
+                left: 0; bottom: 0;
+            }
+            .section1{
+                position: relative;
+                .tec{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    position: relative;
+                    z-index: 100;
+                    .img{
+                        width: 50%;
+                        text-align: center;
+                        img{}
+                    }
+                    .txtarea{
+                        box-sizing: border-box;
+                        width: 50%;
+                        padding: 0 0 0 75px;
+                        padding-bottom: 55px;
+                        .main_t::before{
+                            display: block;
+                            content: "";
+                            width: 2px; height: 60px;
+                            background: #03569f;
+                            position: absolute;
+                            left: 0; bottom: 0;
+                        }
+                        .main_t{
+                            position: relative;
+                            max-width: 600px;
+                            padding: 75px 0;
+                            .slg::before{
+                                display: block;
+                                content: "";
+                                width: 64px; height: 51px;
+                                background: url(../img/aboutus/icon2/bg_dd1.png) no-repeat;
+                                position: absolute;
+                                left: 0; top: 0;
+                            }
+                            .slg{
+                                font-family: "NanumSquare_acB";
+                                font-size: 27px;
+                                color: #222;
+                                line-height: 150%;
+                                margin: 0;
+                                text-align: left;
+                                padding: 0;
+                                word-break: keep-all;
+                                strong{
+                                    display: block;
+                                    font-family: "NanumSquare_acEB";
+                                    font-size: 36px;
+                                    color: #222;
+                                }
+                                span{
+                                    font-family: "NanumSquare_acB";
+                                    font-size: 27px;
+                                    color: #222;
+                                    line-height: 150%;
+                                    margin: 0;
+                                    text-align: left;
+                                    padding: 0;
+                                    word-break: keep-all;
+                                }
+                            }
+                            .slg::after{
+                                display: block;
+                                content: "";
+                                width: 64px; height: 51px;
+                                background: url(../img/aboutus/icon2/bg_dd2.png) no-repeat;
+                                position: absolute;
+                                right: 0; top: 100%;
+                            }
+                        }
+                        p{
+                            margin-top: 20px;
+                            font-size: 21px;
+                            color: #888;
+                            line-height: 170%;
+                        }
+                    }
+                }
+            }
+            .section2{
+                padding: 75px 0 34%;
+                .profile{
+                    max-width: 1320px;
+                    width: 94%;
+                    margin: 0 auto;
+                    .page_color2{
+                        margin-bottom: 120px;
+                        font-family: "NanumSquare_acB";
+                        font-size: 36px;
+                        color: #222;
+                        line-height: 150%;
+                        text-align: center;
+                        transform: translateY(0px);
+                        transition: all 1s;
+                        opacity: 1;
+                        strong{
+                            font-family: "NanumSquare_acEB";
+                            color: #03569f;
+                        }
+                    }
+                    .sec2_tabs{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 110px;
+                        a{
+                            display: block;
+                            position: relative;
+                            width: 49%;
+                            font-size: 17px;
+                            color: #888;
+                            text-align: center;
+                            line-height: 48px;
+                        }
+                        a::after{
+                            display: block;
+                            content: "";
+                            width: 100%; height: 1px;
+                            background: #ccc;
+                            position: absolute;
+                            left: 0; bottom: 0;
+                        }
+                    }
+                    .sec2_tabcons{
+                        .tabcon{
+                            h4{
+                                margin-bottom: 50px;
+                                font-family: "NanumSquare_acEB";
+                                font-size: 36px;
+                                color: #222;
+                                text-align: center;
+                            }
+                            .company_profile{
+                                .ex{
+                                    margin: -50px 0 50px;
+                                    font-size: 17px;
+                                    color: #888;
+                                    text-align: right;
+                                }
+                                .sec2_ani{
+                                    ul{
+                                        display: flex;
+                                        justify-content: center;
+                                        li{
+                                            min-width: 180px;
+                                            margin: 0 5%;
+                                            text-align: center;
+                                            .tit{
+                                                font-family: "NanumSquare_acB";
+                                                font-size: 22px;
+                                                color: #222;
+                                                transform: translateY(0px);
+                                                opacity: 1;
+                                                transition: all 1s 1s;
+                                            }
+                                            .icon{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                height: 115px;
+                                                img{
+                                                    width: 30%;
+                                                    transform-origin: center;
+                                                    animation: icoani1 2s ease-out;
+                                                }
+                                            }
+                                            .con{    
+                                                font-family: "NanumSquare_acEB";
+                                                font-size: 34px;
+                                                color: #222;
+                                                strong{
+                                                    color: #03569f;
+                                                    .num{}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .tabcon2{
+                            h4{}
+                            .bu_tabs{
+                                ul{
+                                    li{
+                                        a{
+                                            .icon{}
+                                            .tit{}
+                                        }
+                                    }
+                                }
+                            }
+                            .bu_tabcons{}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
