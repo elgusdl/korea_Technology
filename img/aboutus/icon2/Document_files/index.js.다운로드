@@ -1,0 +1,23 @@
+
+
+$(function(){
+
+    //메인 포토
+    $('.photo').slick({       
+        speed: 500,
+        dots: true,
+        infinite: true,
+        cssEase: 'linear',
+        fade: true
+
+    });
+
+
+
+
+    
+
+
+
+
+});

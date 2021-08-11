@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-letterfx.css">
     <link href="css/index.css" rel="stylesheet">
 
     <script src="js/jquery/jquery-3.6.0.min.js"></script>
 
-    <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script defer src="js/jquery-letterfx.min.js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/index.js"></script>
 </head>
 <body>
 
@@ -25,11 +31,11 @@
                 <div class="section" id="section1">
                     <div class="about">
                         <div class="backslickimg">
-                            <figure>
+                            <figure class="fade photo">
                                 <img src="img/main/about/1.jpg" alt="없엉">
-                                <!-- <img src="img/main/about/2.jpg" alt="없엉">
+                                <img src="img/main/about/2.jpg" alt="없엉">
                                 <img src="img/main/about/3.jpg" alt="없엉">
-                                <img src="img/main/about/4.jpg" alt="없엉"> -->
+                                <img src="img/main/about/4.jpg" alt="없엉">
                             </figure>
                         </div>
                         <div class="text">
@@ -53,7 +59,9 @@
 
                         </div>
 
-                        <div class="about-sl">
+
+                        <!-- section1 dots / arrow -->
+                        <!-- <div class="about-sl">
                             <div class="ab-prev"></div>
                             <div class="about-btn">
                                 <span class="about-btn-ani"></span>
@@ -62,7 +70,7 @@
                                 <span class="about-btn-ani"></span>
                             </div>
                             <div class="ab-next"></div>
-                        </div>
+                        </div> -->
                         
                         <div class="scroll">
                             <div class="txt">SCROLL</div>
@@ -86,9 +94,11 @@
                             <p>
                                 한국종합기술은 대한민국을 대표하는 종합 엔지니어링 기업입니다.
                             </p>
+
                             <!-- 팔각형모양 -->
                             <div class="bu_tabcon">
                                 <div class="tabcon">
+
                                     <!-- 팔각형모양내용 -->
                                     <div class="tc">
                                         <div class="tab" id="tab1">
@@ -130,14 +140,14 @@
                     
                                                         </svg>
                                                     </div>
-                                                    <div class="wave_txt">
+                                                    <div class="wave_txt letterfx-container letterfx-wave-container letterfx-wave-after-container">
                                                         <div class="txt">
-                                                            <span class="wave">교</span>
-                                                            <span class="wave">통</span>
-                                                            <span class="wave">/</span>
-                                                            <span class="wave">인</span>
-                                                            <span class="wave">프</span>
-                                                            <span class="wave">라</span>
+                                                            <span class="wave letterfx letterfx-wave-before">교</span>
+                                                            <span class="wave letterfx letterfx-wave-before">통</span>
+                                                            <span class="wave letterfx letterfx-wave-before">/</span>
+                                                            <span class="wave letterfx letterfx-wave-before">인</span>
+                                                            <span class="wave letterfx letterfx-wave-before">프</span>
+                                                            <span class="wave letterfx letterfx-wave-before">라</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -184,12 +194,12 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="wave_txt">
+                                                    <div class="wave_txt letterfx-container letterfx-wave-container letterfx-wave-after-container">
                                                         <div class="txt">
-                                                            <span class="wave">국</span>
-                                                            <span class="wave">토</span>
-                                                            <span class="wave">개</span>
-                                                            <span class="wave">발</span>
+                                                            <span class="wave letterfx letterfx-wave-before">국</span>
+                                                            <span class="wave letterfx letterfx-wave-before">토</span>
+                                                            <span class="wave letterfx letterfx-wave-before">개</span>
+                                                            <span class="wave letterfx letterfx-wave-before">발</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -238,12 +248,12 @@
                     
                                                         </svg>
                                                     </div>
-                                                    <div class="wave_txt">
+                                                    <div class="wave_txt letterfx-container letterfx-wave-container letterfx-wave-after-container">
                                                         <div class="txt">
-                                                            <span class="wave">물</span>
-                                                            <span class="wave">/</span>
-                                                            <span class="wave">환</span>
-                                                            <span class="wave">경</span>
+                                                            <span class="wave letterfx letterfx-wave-before">물</span>
+                                                            <span class="wave letterfx letterfx-wave-before">/</span>
+                                                            <span class="wave letterfx letterfx-wave-before">환</span>
+                                                            <span class="wave letterfx letterfx-wave-before">경</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -263,7 +273,7 @@
                                                             <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60.871px" height="49.597px" viewBox="0 0 60.871 49.597" enable-background="new 0 0 60.871 49.597" xml:space="preserve">
                                                                 <g>												
                                                                         <line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="9.282" y1="48.896" x2="27.95" y2="48.896"></line>
-                                                                        <path fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="														M21.955,20.086c0,2.099-1.702,3.801-3.803,3.801c-2.1,0-3.802-1.702-3.802-3.801c0-2.103,1.702-3.806,3.802-3.806
+                                                                        <path fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M21.955,20.086c0,2.099-1.702,3.801-3.803,3.801c-2.1,0-3.802-1.702-3.802-3.801c0-2.103,1.702-3.806,3.802-3.806
                                                                         C20.253,16.28,21.955,17.983,21.955,20.086z"></path>
                                                                         <line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="14.988" y1="48.725" x2="17.105" y2="23.855"></line>											
                                                                         <line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19.285" y1="23.747" x2="21.359" y2="48.518"></line>
@@ -315,15 +325,15 @@
                                                                 </svg> -->
                                                         </div>
                                                     </div>
-                                                    <div class="wave_txt">
+                                                    <div class="wave_txt letterfx-container letterfx-wave-container letterfx-wave-after-container">
                                                         <div class="txt">
-                                                            <span class="wave">에</span>
-                                                            <span class="wave">너</span>
-                                                            <span class="wave">지</span>
-                                                            <span class="wave">/</span>
-                                                            <span class="wave">플</span>
-                                                            <span class="wave">랜</span>
-                                                            <span class="wave">트</span>
+                                                            <span class="wave letterfx letterfx-wave-before">에</span>
+                                                            <span class="wave letterfx letterfx-wave-before">너</span>
+                                                            <span class="wave letterfx letterfx-wave-before">지</span>
+                                                            <span class="wave letterfx letterfx-wave-before">/</span>
+                                                            <span class="wave letterfx letterfx-wave-before">플</span>
+                                                            <span class="wave letterfx letterfx-wave-before">랜</span>
+                                                            <span class="wave letterfx letterfx-wave-before">트</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -369,24 +379,25 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="wave_txt">
+                                                    <div class="wave_txt letterfx-container letterfx-wave-container letterfx-wave-after-container">
                                                         <div class="txt">
-                                                            <span class="wave">C</span>
-                                                            <span class="wave">M</span>
-                                                            <span class="wave">/</span>
-                                                            <span class="wave">공</span>
-                                                            <span class="wave">사</span>
+                                                            <span class="wave letterfx letterfx-wave-before">C</span>
+                                                            <span class="wave letterfx letterfx-wave-before">M</span>
+                                                            <span class="wave letterfx letterfx-wave-before">/</span>
+                                                            <span class="wave letterfx letterfx-wave-before">공</span>
+                                                            <span class="wave letterfx letterfx-wave-before">사</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
+
                                     <!-- 팔각hover했을 때 내용 -->
                                     <div class="b_tabs">
-                                        <div>
+                                        <div style="display:block">
                                             <ul class="list7">
-                                                <li>
+                                                <li class="on">
                                                     <a href="#">
                                                         도로
                                                     </a>
@@ -419,6 +430,87 @@
                                                 <li>
                                                     <a href="#">
                                                         지반
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:none">
+                                            <ul class="list3">
+                                                <li>
+                                                    <a href="#">
+                                                        도시계획·개발
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        조경·레저
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        스마트시티
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:none">
+                                            <ul class="list5">
+                                                <li>
+                                                    <a href="#">
+                                                        상수도
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        하수도
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        하천·수자원
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        댐·수력발전
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        환경평가·환경관리
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:none">
+                                            <ul class="list3">
+                                                <li>
+                                                    <a href="#">
+                                                        플랜트(산업·환경)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        플랜트(발전·에너지)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        환경(에너지)
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:none">
+                                            <ul class="list2">
+                                                <li>
+                                                    <a href="#">
+                                                        CM
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        공 사
                                                     </a>
                                                 </li>
                                             </ul>
@@ -821,7 +913,7 @@
         <div class="indi">
             <ul>
                 <li>
-                    <a href="#">
+                    <a class="active" href="#">
                         <span></span>
                     </a>
                 </li>

@@ -19,8 +19,10 @@
                 height: 100vh;
                 position: relative;
                 .backslickimg{
-                    width: 100%;
-                    figure{
+                    width: 100%; overflow: hidden;
+                    .photo{
+                        margin: 0;
+                        width: 100%;
                         img{width: 100%;}
                     }
                 }
@@ -304,25 +306,113 @@
                                             background: #fff;
                                             border-radius: 50%;
                                             position: absolute;
-                                            left: 50%; top: 50%;
+                                            left: 50%; top: 50.5%;
                                             transform: translate(-50%,-50%);
                                         }
                                     }
                                 }
-                                .tab:hover .bg > svg{
-                                    filter: drop-shadow(10px -3px 12px rgba(255,255,255,0.8) inset);
+                                .tab:hover{
+                                    a{
+                                        .box{
+                                            .bg{
+                                                animation : business_ani 5s linear infinite;
+                                                svg{
+                                                    filter: drop-shadow(10px -3px 12px rgba(255,255,255,0.8) inset);
+                                                    polygon{
+                                                        stroke:#4ec3f4;
+                                                        stroke-opacity:1;
+                                                    }
+                                                }
+                                            }
+                                            @keyframes business_ani{
+                                                0%{transform:rotate(0);}
+                                                100%{transform:rotate(360deg);}
+                                            }
+                                            .icon{
+                                                svg{
+                                                    line{stroke: #4ec3f4;}
+                                                    path{stroke: #4ec3f4;}
+                                                    g{
+                                                        path{stroke: #4ec3f4;}
+                                                        polyline{stroke: #4ec3f4;}
+                                                        line{stroke: #4ec3f4;}
+                                                        circle{stroke: #4ec3f4;}
+                                                    }
+                                                }
+                                            }
+                                            .wave_txt{
+                                                color: #4ec3f4;
+                                                .txt{
+                                                    color: #4ec3f4;
+                                                    .wave{
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
-                                .tab:hover .bg > svg > polygon{
-                                    stroke:#4ec3f4;
-                                    stroke-opacity:1;
+                                #tab1:hover{
+                                    .icon{
+                                        svg{
+                                            line{    
+                                                animation: hover_ani1 2s infinite linear;
+                                                animation-fill-mode: forwards;
+                                            }
+                                        }
+                                    }
                                 }
-                                .tab:hover .bg{animation : business_ani 5s linear infinite;}
-                                .tab:hover .box > .wave_txt > .txt {color: #4ec3f4;}
-                                .tab:hover .box > .icon > svg {color: #4ec3f4;}
-                                
-                                @keyframes business_ani{
-                                    0%{transform:rotate(0);}
+                                #tab2:hover{
+                                    .icon{
+                                        svg{
+                                            .bd{
+                                                polyline{animation:hover_ani2 2.5s infinite 1s;animation-fill-mode:forwards;}
+                                                line.window{animation:hover_ani22 2.5s infinite 1s;animation-fill-mode:forwards;}
+                                            }
+                                        }
+                                    }
+                                }
+                                #tab3:hover{
+                                    .icon{
+                                        svg{
+                                            .water{
+                                                animation:hover_ani3 1s infinite linear;animation-fill-mode:both;
+                                            }
+                                        }
+                                    }
+                                }
+                                #tab4:hover{
+                                    .icon{
+                                        .wings{
+                                            .move{
+                                                transform-origin: center;
+                                                animation: hover_ani4 1s infinite linear;animation-fill-mode:forwards;
+                                            }
+                                        }
+                                    }
+                                }
+                                @keyframes hover_ani1{
+                                    0%{stroke-dashoffset:70;}
+                                    100%{stroke-dashoffset:0;}
+                                }
+                                @keyframes hover_ani2{
+                                    0%{stroke-dashoffset:100;stroke-dasharray:100;}
+                                    100%{stroke-dashoffset:0;}
+                                }
+                                @keyframes hover_ani22{
+                                    0%{stroke-dashoffset:-5;stroke-dasharray:-5;}
+                                    100%{stroke-dashoffset:0;}
+                                }
+                                @keyframes hover_ani3{
+                                    0%{stroke-dashoffset:80}
+                                    100%{stroke-dashoffset:0;}
+                                }
+                                @keyframes hover_ani4{
+                                    0%{transform:rotate(0deg);}
                                     100%{transform:rotate(360deg);}
+                                }
+                                @keyframes hover_ani5{
+                                    0%{transform:rotateY(0deg);}
+                                    100%{transform:rotateY(45deg);}
                                 }
                                 // @keyframes business_ani2{
                                 //     0%{transform:rotate(360deg);}
@@ -339,6 +429,114 @@
                                         align-items: center;
                                         li{
                                             width: 13%;
+                                            overflow: hidden;
+                                            a::before{
+                                                display: block;
+                                                content: "";
+                                                width: 100%; height: 3px;
+                                                border-bottom: 3px solid rgba(255,255,255,0.3);
+                                                position: absolute;
+                                                left: 0; bottom: 0;
+                                            }
+                                            a{
+                                                display: block;
+                                                position: relative;
+                                                padding-bottom: 20px;
+                                                font-size: 26px;
+                                                color: #fff;
+                                                font-weight: 500;
+                                                text-align: left;
+                                            }
+                                            a::after{
+                                                display: block;
+                                                content: "";
+                                                width: 0; height: 3px;
+                                                border-bottom: 3px solid rgba(255,255,255,1);
+                                                position: absolute;
+                                                left: 0; bottom: 0;
+                                                transition: all 0.6s;
+                                            }
+                                        }
+                                        li:hover a::after{width: 100%;}
+                                    }
+                                    .list3{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        li{
+                                            width: 32.4%;
+                                            overflow: hidden;
+                                            a::before{
+                                                display: block;
+                                                content: "";
+                                                width: 100%; height: 3px;
+                                                border-bottom: 3px solid rgba(255,255,255,0.3);
+                                                position: absolute;
+                                                left: 0; bottom: 0;
+                                            }
+                                            a{
+                                                display: block;
+                                                position: relative;
+                                                padding-bottom: 20px;
+                                                font-size: 26px;
+                                                color: #fff;
+                                                font-weight: 500;
+                                                text-align: left;
+                                            }
+                                            a::after{
+                                                display: block;
+                                                content: "";
+                                                width: 0; height: 3px;
+                                                border-bottom: 3px solid rgba(255,255,255,1);
+                                                position: absolute;
+                                                left: 0; bottom: 0;
+                                                transition: all 0.6s;
+                                            }
+                                        }
+                                        li:hover a::after{width: 100%;}
+                                    }
+                                    .list5{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        li{
+                                            width: 18.8%;
+                                            overflow: hidden;
+                                            a::before{
+                                                display: block;
+                                                content: "";
+                                                width: 100%; height: 3px;
+                                                border-bottom: 3px solid rgba(255,255,255,0.3);
+                                                position: absolute;
+                                                left: 0; bottom: 0;
+                                            }
+                                            a{
+                                                display: block;
+                                                position: relative;
+                                                padding-bottom: 20px;
+                                                font-size: 26px;
+                                                color: #fff;
+                                                font-weight: 500;
+                                                text-align: left;
+                                            }
+                                            a::after{
+                                                display: block;
+                                                content: "";
+                                                width: 0; height: 3px;
+                                                border-bottom: 3px solid rgba(255,255,255,1);
+                                                position: absolute;
+                                                left: 0; bottom: 0;
+                                                transition: all 0.6s;
+                                            }
+                                        }
+                                        li:hover a::after{width: 100%;}
+                                    }
+                                    .list2{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        li{
+                                            width: 49.2%;
                                             overflow: hidden;
                                             a::before{
                                                 display: block;

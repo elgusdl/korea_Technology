@@ -107,36 +107,38 @@ main{
         .ab_tabs{
             margin: 50px auto 0;
             text-align: center;
-            div{
+            > div{
                 display: inline-block;
                 position: relative;
                 padding: 0 16px;
                 .l_line{
                     > div:nth-child(1){
-                        display: block;
-                        content: "";
-                        width: 1px; height: 1px;
-                        background: #bbb;
-                        position: absolute;
-                        left: 0; top: 12px;
-                        transform: rotate( 40deg) translate(3px,-8px);
+                        display:block;
+                        content:"";
+                        width:1px;
+                        height:22px;
+                        background:#bbb;
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        transform:rotate(46deg) translate(3px,-8px);
                     }
                     > div:nth-child(2){
-                        display: block;
-                        content: "";
-                        width: 1px; height: 1px;
-                        background: #bbb;
-                        position: absolute;
-                        left: 0; top: 15px;
+                        display:block;
+                        content:"";
+                        width:1px; height:26px;
+                        background:#bbb;
+                        position:absolute;
+                        left:0; top:15px;
                     }
                     > div:nth-child(3){
-                        display: block;
-                        content: "";
-                        width: 1px; height: 1px;
-                        background: #bbb;
-                        position: absolute;
-                        left: 0; bottom: 26px;
-                        transform: rotate(-40deg) translate(3px,8px);
+                        display:block;
+                        content:"";
+                        width:1px; height:22px;
+                        background:#bbb;
+                        position:absolute;
+                        left:0; bottom:0;
+                        transform:rotate(-46deg) translate(3px,8px);
                     }
                 }
                 ul{
@@ -147,7 +149,26 @@ main{
                     border-bottom: 1px solid #bbb;
                     li{
                         width: 190px;
-                        a{
+                        > .on:before{
+                            display: block;
+                            content: "";
+                            border-right: 12px solid #03569f;
+                            border-top: 12px solid transparent;
+                            border-bottom: 12px solid transparent;
+                            position: absolute;
+                            right: 100%;
+                            top: 0;
+                            width: 0;
+                            height: calc(100%);
+                        }
+                        > a{
+                            display: block;
+                            position: relative;
+                            font-size: 17px;
+                            color: #888;
+                            line-height: 48px;
+                        }
+                        > .on:nth-child(1){
                             background: #03569f;
                             color: #fff;
 
@@ -158,13 +179,25 @@ main{
                             text-decoration: none;
                             cursor: pointer;
                         }
+                        > .on:nth-child(1)::after{
+                            display: block;
+                            content: "";
+                            border-left: 12px solid #03569f;
+                            border-top: 12px solid transparent;
+                            border-bottom: 12px solid transparent;
+                            position: absolute;
+                            left: 100%;
+                            top: 0;
+                            width: 0;
+                            height: calc(100%);
+                        }
                     }
                 }
                 .r_line{
                     > div:nth-child(1){
                         display:block;
                         content: "";
-                        width:1px; height:1px;
+                        width:1px; height:22px;
                         background:#bbb;
                         position:absolute;
                         right:0; top:0;
@@ -173,7 +206,7 @@ main{
                     > div:nth-child(2){
                         display:block;
                         content: "";
-                        width:1px; height:1px;
+                        width:1px; height:26px;
                         background:#bbb;
                         position:absolute;
                         right:0; top:15px;
@@ -181,7 +214,7 @@ main{
                     > div:nth-child(3){
                         display:block;
                         content: "";
-                        width:1px; height:1px;
+                        width:1px; height:22px;
                         background:#bbb;
                         position:absolute;
                         right:0; bottom:0;
@@ -210,6 +243,9 @@ main{
                     display: inline-block;
                     line-height: 150%;
                     text-align: left;
+                    font-family: "NanumSquare_acEB";
+                    font-weight: 600;
+                    letter-spacing: -4px;
 
                     transform: translateY(0px);
                     opacity: 1;
@@ -286,6 +322,7 @@ main{
                                     display: block;
                                     font-family: "NanumSquare_acEB";
                                     font-size: 36px;
+                                    letter-spacing: -4px;
                                     color: #222;
                                 }
                                 span{
@@ -296,6 +333,7 @@ main{
                                     margin: 0;
                                     text-align: left;
                                     padding: 0;
+                                    font-weight: 530;
                                     word-break: keep-all;
                                 }
                             }
@@ -336,6 +374,7 @@ main{
                         strong{
                             font-family: "NanumSquare_acEB";
                             color: #03569f;
+                            letter-spacing: -5px;
                         }
                     }
                     .sec2_tabs{
@@ -384,6 +423,8 @@ main{
                                             min-width: 180px;
                                             margin: 0 5%;
                                             text-align: center;
+                                            font-weight: bold;
+                                            letter-spacing: -2px;
                                             .tit{
                                                 font-family: "NanumSquare_acB";
                                                 font-size: 22px;
@@ -398,18 +439,27 @@ main{
                                                 justify-content: center;
                                                 height: 115px;
                                                 img{
-                                                    width: 30%;
+                                                    width: 36%;
                                                     transform-origin: center;
                                                     animation: icoani1 2s ease-out;
+                                                }
+                                                .w32{width: 32%;}
+                                                .w46{width: 46%;}
+
+                                                @keyframes icoani1{
+                                                    0%{transform:scale(0) translateZ(-100px);}
+                                                    50%{transform:scale(1.1) translateZ(20px);}
+                                                    100%{transform:scale(1) translateZ(0);}
                                                 }
                                             }
                                             .con{    
                                                 font-family: "NanumSquare_acEB";
                                                 font-size: 34px;
                                                 color: #222;
+                                                letter-spacing: -5px;
                                                 strong{
                                                     color: #03569f;
-                                                    .num{}
+                                                    .num{letter-spacing: -1px;}
                                                 }
                                             }
                                         }
@@ -418,18 +468,327 @@ main{
                             }
                         }
                         .tabcon2{
-                            h4{}
+                            display: block;
+                            padding-bottom: 80px;
+                            h4{
+                                margin-bottom: 50px;
+                                font-family: "NanumSquare_acEB";
+                                font-size: 36px;
+                                color: #222;
+                                text-align: center;
+                                letter-spacing: -0.0125em;
+                                word-break: keep-all;
+                            }
                             .bu_tabs{
                                 ul{
+                                    display: flex;
+                                    justify-content: space-around;
+
+                                    // 위화살표
+                                    li::before{
+                                        display: block;
+                                        content: "";
+                                        width: 0; height: 0;
+                                        border-top: 8px solid #d3d3d3;
+                                        border-left: 7px solid transparent;
+                                        border-right: 7px solid transparent;
+                                        position: absolute;
+                                        left: 50%; bottom: 0;
+                                        transform: translateX(-50%);
+                                        opacity: 0;
+                                    }
+                                    li.on::before{opacity: 1;}
+
                                     li{
+                                        position: relative;
+                                        min-width: 150px;
+                                        padding: 0 3.5% 60px;
+                                        text-align: center;
                                         a{
-                                            .icon{}
-                                            .tit{}
+                                            .icon{
+                                                height: 90px;
+                                                margin-bottom: 15px;
+                                                transition: all 0.3s;
+                                            }
+                                            .tit{
+                                                font-family: "NanumSquare_acB";
+                                                font-size: 20px;
+                                                color: #ccc;
+                                                transition: all 0.3s;
+                                                height: 26px;
+                                            }
+                                        }
+                                    }
+
+                                    // 첫번째아이콘
+                                    li.on:nth-child(1) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico1_over.png) no-repeat center;
+                                        background-size: auto 73px;
+                                    }
+                                    li:nth-child(1) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico1.png) no-repeat center;
+                                        background-size: auto 57px;
+                                    }
+                                    li.on:nth-child(1) > a > .tit{
+                                        font-family: "NanumSquare_acEB";
+                                        font-size: 24px; color: #222;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                                    li:nth-child(1) > a > .tit{
+                                        font-family: "NanumSquare_acB";
+                                        font-size: 20px; color: #ccc;
+                                        transition: all 0.3s;
+                                        height: 26px;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+
+                                    // 두번째아이콘
+                                    li.on:nth-child(2) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico2_over.png) no-repeat center;
+                                        background-size: auto 72px;
+                                    }
+                                    li:nth-child(2) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico2.png) no-repeat center;
+                                        background-size: auto 56px;
+                                    }
+                                    li.on:nth-child(2) > a > .tit{
+                                        font-family: "NanumSquare_acEB";
+                                        font-size: 24px; color: #222;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                                    li:nth-child(2) > a > .tit{
+                                        font-family: "NanumSquare_acB";
+                                        font-size: 20px; color: #ccc;
+                                        transition: all 0.3s;
+                                        height: 26px;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                                    
+                                    // 세번째아이콘
+                                    li.on:nth-child(3) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico3_over.png) no-repeat center;
+                                        background-size: auto 71px;
+                                    }
+                                    li:nth-child(3) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico3.png) no-repeat center;
+                                        background-size: auto 61px;
+                                    }
+                                    li.on:nth-child(3) > a > .tit{
+                                        font-family: "NanumSquare_acEB";
+                                        font-size: 24px; color: #222;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                                    li:nth-child(3) > a > .tit{
+                                        font-family: "NanumSquare_acB";
+                                        font-size: 20px; color: #ccc;
+                                        transition: all 0.3s;
+                                        height: 26px;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                 
+                                    // 네번째아이콘
+                                    li.on:nth-child(4) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico4_over.png) no-repeat center;
+                                        background-size: auto 76px;
+                                    }
+                                    li:nth-child(4) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico4.png) no-repeat center;
+                                        background-size: auto 59px;
+                                    }
+                                    li.on:nth-child(4) > a > .tit{
+                                        font-family: "NanumSquare_acEB";
+                                        font-size: 24px; color: #222;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                                    li:nth-child(4) > a > .tit{
+                                        font-family: "NanumSquare_acB";
+                                        font-size: 20px; color: #ccc;
+                                        transition: all 0.3s;
+                                        height: 26px;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                                                     
+                                    // 다섯번째아이콘
+                                    li.on:nth-child(5) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico5_over.png) no-repeat center;
+                                        background-size: auto 80px;
+                                    }
+                                    li:nth-child(5) > a > .icon{
+                                        background: url(../img/aboutus/icon2/m11_1_ico5.png) no-repeat center;
+                                        background-size: auto 62px;
+                                    }
+                                    li.on:nth-child(5) > a > .tit{
+                                        font-family: "NanumSquare_acEB";
+                                        font-size: 24px; color: #222;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+                                    li:nth-child(5) > a > .tit{
+                                        font-family: "NanumSquare_acB";
+                                        font-size: 20px; color: #ccc;
+                                        transition: all 0.3s;
+                                        height: 26px;
+                                        font-weight: bold;
+                                        letter-spacing: -2px;
+                                    }
+
+                                    // 밑화살표
+                                    li::after{
+                                        display: block;
+                                        content: "";
+                                        width: 0; height: 0;
+                                        border-top: 8px solid #d3d3d3;
+                                        border-left: 7px solid transparent;
+                                        border-right: 7px solid transparent;
+                                        position: absolute;
+                                        left: 50%; bottom: 15px;
+                                        transform: translateX(-50%);
+                                        opacity: 0;
+                                    }
+                                    li.on::after{opacity: 1;}
+                                }
+                            }
+                            .bu_tabcons{
+                                margin-top: 30px;
+                                .tabcon{
+                                    display: block;
+                                    box-sizing: border-box;
+                                    padding: 45px 0;
+                                    height: 188px;
+                                    background: #f6f6f6;
+                                    div{
+                                        display: flex;
+                                        align-items: center;
+                                        .titarea{
+                                            width: 205px;
+                                            text-align: center;
+                                            display: inline-block;
+                                            .icon{
+                                                height: 59px;
+                                                margin-bottom: 15px;
+                                            }
+                                            .tit{
+                                                font-family: "NanumSquare_acB";
+                                                font-size: 20px;
+                                                color: #222;
+                                            }
+                                        }
+                                        .con{
+                                            ul{
+                                                li{
+                                                    margin-bottom: 0;
+                                                    padding: 0;
+                                                    font-size: 17px;
+                                                    color: #888;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .tabcon:nth-child(1){
+                                    .titarea{
+                                        .icon{
+                                            width: 100%;
+                                            background: url(../img/aboutus/icon2/m11_1_ico1_over.png) no-repeat center;
+                                            background-size: auto 54px;
+                                        }
+                                        .tit{
+                                            width: 100%;
+                                            text-align: center;
+                                            display: inline-block;
+                                            font-family: "NanumSquare_acB";
+                                            font-size: 20px;
+                                            color: #222;
+                                            letter-spacing: -2px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                                .tabcon:nth-child(2){
+                                    .titarea{
+                                        .icon{
+                                            width: 100%;
+                                            background: url(../img/aboutus/icon2/m11_1_ico2_over.png) no-repeat center;
+                                            background-size: auto 54px;
+                                        }
+                                        .tit{
+                                            width: 100%;
+                                            text-align: center;
+                                            display: inline-block;
+                                            font-family: "NanumSquare_acB";
+                                            font-size: 20px;
+                                            color: #222;
+                                            letter-spacing: -2px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                                .tabcon:nth-child(3){
+                                    .titarea{
+                                        .icon{
+                                            width: 100%;
+                                            background: url(../img/aboutus/icon2/m11_1_ico3_over.png) no-repeat center;
+                                            background-size: auto 54px;
+                                        }
+                                        .tit{
+                                            width: 100%;
+                                            text-align: center;
+                                            display: inline-block;
+                                            font-family: "NanumSquare_acB";
+                                            font-size: 20px;
+                                            color: #222;
+                                            letter-spacing: -2px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                                .tabcon:nth-child(4){
+                                    .titarea{
+                                        .icon{
+                                            width: 100%;
+                                            background: url(../img/aboutus/icon2/m11_1_ico4_over.png) no-repeat center;
+                                            background-size: auto 54px;
+                                        }
+                                        .tit{
+                                            width: 100%;
+                                            text-align: center;
+                                            display: inline-block;
+                                            font-family: "NanumSquare_acB";
+                                            font-size: 20px;
+                                            color: #222;
+                                            letter-spacing: -2px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                                .tabcon:nth-child(5){
+                                    .titarea{
+                                        .icon{
+                                            width: 100%;
+                                            background: url(../img/aboutus/icon2/m11_1_ico5_over.png) no-repeat center;
+                                            background-size: auto 54px;
+                                        }
+                                        .tit{
+                                            width: 100%;
+                                            text-align: center;
+                                            display: inline-block;
+                                            font-family: "NanumSquare_acB";
+                                            font-size: 20px;
+                                            color: #222;
+                                            letter-spacing: -2px;
+                                            font-weight: bold;
                                         }
                                     }
                                 }
                             }
-                            .bu_tabcons{}
                         }
                     }
                 }

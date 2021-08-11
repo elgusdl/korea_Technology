@@ -745,50 +745,50 @@ main div .ab_tabs {
   text-align: center;
 }
 
-main div .ab_tabs div {
+main div .ab_tabs > div {
   display: inline-block;
   position: relative;
   padding: 0 16px;
 }
 
-main div .ab_tabs div .l_line > div:nth-child(1) {
+main div .ab_tabs > div .l_line > div:nth-child(1) {
   display: block;
   content: "";
   width: 1px;
-  height: 1px;
+  height: 22px;
   background: #bbb;
   position: absolute;
   left: 0;
-  top: 12px;
-  -webkit-transform: rotate(40deg) translate(3px, -8px);
-          transform: rotate(40deg) translate(3px, -8px);
+  top: 0;
+  -webkit-transform: rotate(46deg) translate(3px, -8px);
+          transform: rotate(46deg) translate(3px, -8px);
 }
 
-main div .ab_tabs div .l_line > div:nth-child(2) {
+main div .ab_tabs > div .l_line > div:nth-child(2) {
   display: block;
   content: "";
   width: 1px;
-  height: 1px;
+  height: 26px;
   background: #bbb;
   position: absolute;
   left: 0;
   top: 15px;
 }
 
-main div .ab_tabs div .l_line > div:nth-child(3) {
+main div .ab_tabs > div .l_line > div:nth-child(3) {
   display: block;
   content: "";
   width: 1px;
-  height: 1px;
+  height: 22px;
   background: #bbb;
   position: absolute;
   left: 0;
-  bottom: 26px;
-  -webkit-transform: rotate(-40deg) translate(3px, 8px);
-          transform: rotate(-40deg) translate(3px, 8px);
+  bottom: 0;
+  -webkit-transform: rotate(-46deg) translate(3px, 8px);
+          transform: rotate(-46deg) translate(3px, 8px);
 }
 
-main div .ab_tabs div ul {
+main div .ab_tabs > div ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -799,11 +799,32 @@ main div .ab_tabs div ul {
   border-bottom: 1px solid #bbb;
 }
 
-main div .ab_tabs div ul li {
+main div .ab_tabs > div ul li {
   width: 190px;
 }
 
-main div .ab_tabs div ul li a {
+main div .ab_tabs > div ul li > .on:before {
+  display: block;
+  content: "";
+  border-right: 12px solid #03569f;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 0;
+  height: calc(100%);
+}
+
+main div .ab_tabs > div ul li > a {
+  display: block;
+  position: relative;
+  font-size: 17px;
+  color: #888;
+  line-height: 48px;
+}
+
+main div .ab_tabs > div ul li > .on:nth-child(1) {
   background: #03569f;
   color: #fff;
   display: block;
@@ -814,11 +835,24 @@ main div .ab_tabs div ul li a {
   cursor: pointer;
 }
 
-main div .ab_tabs div .r_line > div:nth-child(1) {
+main div .ab_tabs > div ul li > .on:nth-child(1)::after {
+  display: block;
+  content: "";
+  border-left: 12px solid #03569f;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 0;
+  height: calc(100%);
+}
+
+main div .ab_tabs > div .r_line > div:nth-child(1) {
   display: block;
   content: "";
   width: 1px;
-  height: 1px;
+  height: 22px;
   background: #bbb;
   position: absolute;
   right: 0;
@@ -827,22 +861,22 @@ main div .ab_tabs div .r_line > div:nth-child(1) {
           transform: rotate(-46deg) translate(-3px, -8px);
 }
 
-main div .ab_tabs div .r_line > div:nth-child(2) {
+main div .ab_tabs > div .r_line > div:nth-child(2) {
   display: block;
   content: "";
   width: 1px;
-  height: 1px;
+  height: 26px;
   background: #bbb;
   position: absolute;
   right: 0;
   top: 15px;
 }
 
-main div .ab_tabs div .r_line > div:nth-child(3) {
+main div .ab_tabs > div .r_line > div:nth-child(3) {
   display: block;
   content: "";
   width: 1px;
-  height: 1px;
+  height: 22px;
   background: #bbb;
   position: absolute;
   right: 0;
@@ -876,6 +910,9 @@ main div .ab_con .page_color .page_txt {
   display: inline-block;
   line-height: 150%;
   text-align: left;
+  font-family: "NanumSquare_acEB";
+  font-weight: 600;
+  letter-spacing: -4px;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   opacity: 1;
@@ -979,6 +1016,7 @@ main div .ab_con .section1 .tec .txtarea .main_t .slg strong {
   display: block;
   font-family: "NanumSquare_acEB";
   font-size: 36px;
+  letter-spacing: -4px;
   color: #222;
 }
 
@@ -990,6 +1028,7 @@ main div .ab_con .section1 .tec .txtarea .main_t .slg span {
   margin: 0;
   text-align: left;
   padding: 0;
+  font-weight: 530;
   word-break: keep-all;
 }
 
@@ -1038,6 +1077,7 @@ main div .ab_con .section2 .profile .page_color2 {
 main div .ab_con .section2 .profile .page_color2 strong {
   font-family: "NanumSquare_acEB";
   color: #03569f;
+  letter-spacing: -5px;
 }
 
 main div .ab_con .section2 .profile .sec2_tabs {
@@ -1099,6 +1139,8 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2
   min-width: 180px;
   margin: 0 5%;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: -2px;
 }
 
 main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2_ani ul li .tit {
@@ -1126,20 +1168,425 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2
 }
 
 main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2_ani ul li .icon img {
-  width: 30%;
+  width: 36%;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation: icoani1 2s ease-out;
           animation: icoani1 2s ease-out;
 }
 
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2_ani ul li .icon .w32 {
+  width: 32%;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2_ani ul li .icon .w46 {
+  width: 46%;
+}
+
+@-webkit-keyframes icoani1 {
+  0% {
+    -webkit-transform: scale(0) translateZ(-100px);
+            transform: scale(0) translateZ(-100px);
+  }
+  50% {
+    -webkit-transform: scale(1.1) translateZ(20px);
+            transform: scale(1.1) translateZ(20px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+            transform: scale(1) translateZ(0);
+  }
+}
+
+@keyframes icoani1 {
+  0% {
+    -webkit-transform: scale(0) translateZ(-100px);
+            transform: scale(0) translateZ(-100px);
+  }
+  50% {
+    -webkit-transform: scale(1.1) translateZ(20px);
+            transform: scale(1.1) translateZ(20px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+            transform: scale(1) translateZ(0);
+  }
+}
+
 main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2_ani ul li .con {
   font-family: "NanumSquare_acEB";
   font-size: 34px;
   color: #222;
+  letter-spacing: -5px;
 }
 
 main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2_ani ul li .con strong {
   color: #03569f;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon .company_profile .sec2_ani ul li .con strong .num {
+  letter-spacing: -1px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 {
+  display: block;
+  padding-bottom: 80px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 h4 {
+  margin-bottom: 50px;
+  font-family: "NanumSquare_acEB";
+  font-size: 36px;
+  color: #222;
+  text-align: center;
+  letter-spacing: -0.0125em;
+  word-break: keep-all;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li::before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 8px solid #d3d3d3;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on::before {
+  opacity: 1;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li {
+  position: relative;
+  min-width: 150px;
+  padding: 0 3.5% 60px;
+  text-align: center;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li a .icon {
+  height: 90px;
+  margin-bottom: 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li a .tit {
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 26px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(1) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico1_over.png) no-repeat center;
+  background-size: auto 73px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(1) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico1.png) no-repeat center;
+  background-size: auto 57px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(1) > a > .tit {
+  font-family: "NanumSquare_acEB";
+  font-size: 24px;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(1) > a > .tit {
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 26px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(2) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico2_over.png) no-repeat center;
+  background-size: auto 72px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(2) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico2.png) no-repeat center;
+  background-size: auto 56px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(2) > a > .tit {
+  font-family: "NanumSquare_acEB";
+  font-size: 24px;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(2) > a > .tit {
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 26px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(3) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico3_over.png) no-repeat center;
+  background-size: auto 71px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(3) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico3.png) no-repeat center;
+  background-size: auto 61px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(3) > a > .tit {
+  font-family: "NanumSquare_acEB";
+  font-size: 24px;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(3) > a > .tit {
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 26px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(4) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico4_over.png) no-repeat center;
+  background-size: auto 76px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(4) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico4.png) no-repeat center;
+  background-size: auto 59px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(4) > a > .tit {
+  font-family: "NanumSquare_acEB";
+  font-size: 24px;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(4) > a > .tit {
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 26px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(5) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico5_over.png) no-repeat center;
+  background-size: auto 80px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(5) > a > .icon {
+  background: url(../img/aboutus/icon2/m11_1_ico5.png) no-repeat center;
+  background-size: auto 62px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on:nth-child(5) > a > .tit {
+  font-family: "NanumSquare_acEB";
+  font-size: 24px;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li:nth-child(5) > a > .tit {
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 26px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 8px solid #d3d3d3;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabs ul li.on::after {
+  opacity: 1;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons {
+  margin-top: 30px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 45px 0;
+  height: 188px;
+  background: #f6f6f6;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .titarea {
+  width: 205px;
+  text-align: center;
+  display: inline-block;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .titarea .icon {
+  height: 59px;
+  margin-bottom: 15px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .titarea .tit {
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #222;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .con ul li {
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 17px;
+  color: #888;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(1) .titarea .icon {
+  width: 100%;
+  background: url(../img/aboutus/icon2/m11_1_ico1_over.png) no-repeat center;
+  background-size: auto 54px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(1) .titarea .tit {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #222;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(2) .titarea .icon {
+  width: 100%;
+  background: url(../img/aboutus/icon2/m11_1_ico2_over.png) no-repeat center;
+  background-size: auto 54px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(2) .titarea .tit {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #222;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(3) .titarea .icon {
+  width: 100%;
+  background: url(../img/aboutus/icon2/m11_1_ico3_over.png) no-repeat center;
+  background-size: auto 54px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(3) .titarea .tit {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #222;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(4) .titarea .icon {
+  width: 100%;
+  background: url(../img/aboutus/icon2/m11_1_ico4_over.png) no-repeat center;
+  background-size: auto 54px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(4) .titarea .tit {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #222;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(5) .titarea .icon {
+  width: 100%;
+  background: url(../img/aboutus/icon2/m11_1_ico5_over.png) no-repeat center;
+  background-size: auto 54px;
+}
+
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(5) .titarea .tit {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: "NanumSquare_acB";
+  font-size: 20px;
+  color: #222;
+  letter-spacing: -2px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=aboutus.css.map */
