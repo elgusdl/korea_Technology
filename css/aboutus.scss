@@ -390,6 +390,7 @@ main{
                             text-align: center;
                             line-height: 48px;
                         }
+                        a.on{color: #03569f;}
                         a::after{
                             display: block;
                             content: "";
@@ -397,6 +398,10 @@ main{
                             background: #ccc;
                             position: absolute;
                             left: 0; bottom: 0;
+                        }
+                        a.on::after{
+                            height: 2px;
+                            background: #03569f;
                         }
                     }
                     .sec2_tabcons{
@@ -658,10 +663,10 @@ main{
                             }
                             .bu_tabcons{
                                 margin-top: 30px;
-                                .tabcon{
+                                .list{
                                     display: block;
                                     box-sizing: border-box;
-                                    padding: 45px 0;
+                                    padding: 40px 0;
                                     height: 188px;
                                     background: #f6f6f6;
                                     div{
@@ -672,6 +677,7 @@ main{
                                             text-align: center;
                                             display: inline-block;
                                             .icon{
+                                                width: 100%;
                                                 height: 59px;
                                                 margin-bottom: 15px;
                                             }
@@ -693,7 +699,7 @@ main{
                                         }
                                     }
                                 }
-                                .tabcon:nth-child(1){
+                                .list:nth-child(1){
                                     .titarea{
                                         .icon{
                                             width: 100%;
@@ -712,7 +718,7 @@ main{
                                         }
                                     }
                                 }
-                                .tabcon:nth-child(2){
+                                .list:nth-child(2){
                                     .titarea{
                                         .icon{
                                             width: 100%;
@@ -731,7 +737,7 @@ main{
                                         }
                                     }
                                 }
-                                .tabcon:nth-child(3){
+                                .list:nth-child(3){
                                     .titarea{
                                         .icon{
                                             width: 100%;
@@ -750,7 +756,7 @@ main{
                                         }
                                     }
                                 }
-                                .tabcon:nth-child(4){
+                                .list:nth-child(4){
                                     .titarea{
                                         .icon{
                                             width: 100%;
@@ -769,7 +775,7 @@ main{
                                         }
                                     }
                                 }
-                                .tabcon:nth-child(5){
+                                .list:nth-child(5){
                                     .titarea{
                                         .icon{
                                             width: 100%;

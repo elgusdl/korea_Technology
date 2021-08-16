@@ -1,5 +1,3 @@
-
-
 $(function(){
 
     // section scroll
@@ -23,6 +21,7 @@ $(function(){
         if(num < 7){
             slide=$('.section').eq(num).position().top ;
             $('.section').removeClass('active').eq(num).addClass('active');
+            $('.section').removeClass('in-view').eq(num).addClass('in-view');
             $('.indi a').removeClass('active')
             $('.indi a').eq(num).addClass('active')
         }else{
@@ -40,6 +39,8 @@ $(function(){
 	
 
 
+
+
     //메인 포토
     $('.photo').slick({       
         speed: 1000,
@@ -50,6 +51,7 @@ $(function(){
         autoplay: true,
         autoplaySpeed: 5000
     });
+
 
 
 
@@ -86,41 +88,7 @@ $(function(){
 
 });
 
-$.ajax({
-    url:'data/project.json',
 
-    success:function(data){
-        
-        let tagList,pro;
-        pro = localStorage.pro;
-
-        //list
-        function list(){
-
-            tagList='';
-            data.forEach(function(v){
-                tagList += `<li>
-                                <a href="#">
-                                    <figure>
-                                        <img src="${v.photo}" alt="없엉">
-                                    </figure>
-                                    <div class="pro-g">
-                                        <div class="pro-text">
-                                            ${v.text}
-                                        </div>
-                                        <div class="more">
-                                            VIEW MORE
-                                            <span class="arr"> → </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>`;
-            });
-            $('.pro-txt ul').html(tagList);
-        } list();
-    }
-
-});
 
 
 

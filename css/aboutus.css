@@ -35,20 +35,16 @@ div {
   font-family: "Noto Sans KR","돋움",dotum,sans-serif;
 }
 
-header {
+header > #header {
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1000;
   width: 100%;
+  display: block;
 }
 
-header div {
-  position: relative;
-  width: 100%;
-}
-
-header div .head {
+header > #header .head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,13 +56,15 @@ header div .head {
           justify-content: space-between;
   position: relative;
   z-index: 1000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: 85px;
   padding: 0 5%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-header div .head h1 a {
+header > #header .head h1 a {
   display: block;
   width: 160px;
   height: 50px;
@@ -75,12 +73,14 @@ header div .head h1 a {
   text-indent: -9999px;
 }
 
-header div .head .menucenter {
+header > #header .head .menucenter {
   position: relative;
+  width: calc(100% - 160px - 194px);
+  height: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-header div .head .menucenter .nav {
+header > #header .head .menucenter .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,17 +89,22 @@ header div .head .menucenter .nav {
           justify-content: center;
 }
 
-header div .head .menucenter .nav li {
+header > #header .head .menucenter .nav li {
   margin: 0 4%;
 }
 
-header div .head .menucenter .nav li a {
+header > #header .head .menucenter .nav li a {
   font-size: 18px;
   color: #fff;
   line-height: 85px;
 }
 
-header div .head .menucenter .language {
+header > #header .head .menucenter .nav li.active {
+  -webkit-box-shadow: 0 -2px 0 #03569f inset;
+          box-shadow: 0 -2px 0 #03569f inset;
+}
+
+header > #header .head .menucenter .language {
   position: absolute;
   right: 2%;
   top: 34px;
@@ -108,29 +113,29 @@ header div .head .menucenter .language {
   display: flex;
 }
 
-header div .head .menucenter .language li {
+header > #header .head .menucenter .language li {
   margin-left: 10px;
   text-align: center;
 }
 
-header div .head .menucenter .language li a {
+header > #header .head .menucenter .language li a {
   color: #fff;
 }
 
-header div .head .menucenter .language li a img {
+header > #header .head .menucenter .language li a img {
   width: 100%;
 }
 
-header div .head .menucenter .language li a div {
+header > #header .head .menucenter .language li a div {
   font-size: 14px;
   opacity: 0;
 }
 
-header div .head .menucenter .language li:hover div {
+header > #header .head .menucenter .language li:hover div {
   opacity: 1;
 }
 
-header div .head .menuright {
+header > #header .head .menuright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,7 +151,7 @@ header div .head .menuright {
   cursor: pointer;
 }
 
-header div .head .menuright .btn_menu {
+header > #header .head .menuright .btn_menu {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -158,7 +163,7 @@ header div .head .menuright .btn_menu {
   z-index: 3000;
 }
 
-header div .head .menuright .btn_menu .menu_text {
+header > #header .head .menuright .btn_menu .menu_text {
   font-family: "Roboto";
   font-size: 13px;
   color: #fff;
@@ -166,22 +171,39 @@ header div .head .menuright .btn_menu .menu_text {
   display: block;
 }
 
-header div .head .menuright .btn_menu .hamburger {
+header > #header .head .menuright .btn_menu .hamburger {
   position: relative;
   z-index: 1100;
-  width: 40px;
+  width: 30px;
   height: 20px;
+  margin-left: 13px;
   display: block;
 }
 
-header div .head .menuright .btn_menu .hamburger div {
+header > #header .head .menuright .btn_menu .hamburger div {
   width: 100%;
   height: 2px;
   margin-bottom: 7px;
   background: #fff;
 }
 
-header div .head .pc-allmenu {
+header > #header .head .menuright .btn_menu.openmenu .hamburger div:nth-child(1) {
+  width: 100%;
+  -webkit-transform: translateY(9px) rotate(45deg);
+          transform: translateY(9px) rotate(45deg);
+}
+
+header > #header .head .menuright .btn_menu.openmenu .hamburger div:nth-child(2) {
+  opacity: 0;
+}
+
+header > #header .head .menuright .btn_menu.openmenu .hamburger div:nth-child(3) {
+  width: 100%;
+  -webkit-transform: translateY(-9.1px) rotate(-45deg);
+          transform: translateY(-9.1px) rotate(-45deg);
+}
+
+header > #header .head .pc-allmenu {
   position: absolute;
   left: 0;
   top: -100vh;
@@ -195,7 +217,7 @@ header div .head .pc-allmenu {
   transition: all 1s cubic-bezier(0.67, 0.34, 0.24, 1);
 }
 
-header div .head .pc-allmenu .allmenu {
+header > #header .head .pc-allmenu .allmenu {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -203,7 +225,7 @@ header div .head .pc-allmenu .allmenu {
   padding: 60px 0 0;
 }
 
-header div .head .pc-allmenu .allmenu .submenu {
+header > #header .head .pc-allmenu .allmenu .submenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,7 +236,7 @@ header div .head .pc-allmenu .allmenu .submenu {
   padding: 38px 5% 0;
 }
 
-header div .head .pc-allmenu .allmenu .submenu h2 {
+header > #header .head .pc-allmenu .allmenu .submenu h2 {
   width: 15%;
   font-size: 26px;
   color: #fff;
@@ -225,7 +247,7 @@ header div .head .pc-allmenu .allmenu .submenu h2 {
   opacity: 1;
 }
 
-header div .head .pc-allmenu .allmenu .submenu .sub {
+header > #header .head .pc-allmenu .allmenu .submenu .sub {
   width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,35 +257,52 @@ header div .head .pc-allmenu .allmenu .submenu .sub {
   opacity: 1;
 }
 
-header div .head .pc-allmenu .allmenu .submenu .sub .su {
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 20%;
   padding-right: 50px;
 }
 
-header div .head .pc-allmenu .allmenu .submenu .sub .su h3 {
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su h3 {
   font-size: 19px;
   color: #50ccff;
   font-weight: 500;
   line-height: 90%;
 }
 
-header div .head .pc-allmenu .allmenu .submenu .sub .su ul {
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su ul {
   margin-top: 20px;
 }
 
-header div .head .pc-allmenu .allmenu .submenu .sub .su ul li {
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su ul li {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
   margin-bottom: 5px;
 }
 
-header div .head .pc-allmenu .allmenu .submenu .sub .su ul li a {
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su ul li a {
   font-size: 17px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 300;
 }
 
-header div .head .pc-allmenu .allmenu .submenu::after {
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su ul li a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su .con3 {
+  -webkit-column-count: 3;
+          column-count: 3;
+}
+
+header > #header .head .pc-allmenu .allmenu .submenu .sub .su .con2 {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+header > #header .head .pc-allmenu .allmenu .submenu::after {
   display: block;
   content: "";
   width: 100%;
@@ -276,28 +315,49 @@ header div .head .pc-allmenu .allmenu .submenu::after {
           transform: scaleX(0);
 }
 
-header div .pc-topmenu {
+header > #header .head .pc-allmenu .allmenu .on .submenu:nth-child(odd)::after {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 0.6s 1s linear;
+  transition: all 0.6s 1s linear;
+}
+
+header > #header .head .pc-allmenu .allmenu .on .submenu:nth-child(even)::after {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: all 0.6s 1s linear;
+  transition: all 0.6s 1s linear;
+}
+
+header > #header .head .pc-allmenu .allmenu .submenu::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header > #header .pc-topmenu {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 900;
   width: 100%;
-  height: 300px;
+  height: 260px;
   background: #fff;
+  padding: 85px 0 0;
   display: none;
+  margin: 0;
 }
 
-header div .pc-topmenu div {
+header > #header .pc-topmenu div {
   max-width: 1330px;
   width: 100%;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
-header div .pc-topmenu div .topmenu {
+header > #header .pc-topmenu div .topmenu {
   overflow: hidden;
 }
 
-header div .pc-topmenu div .topmenu .title {
+header > #header .pc-topmenu div .topmenu .title {
   float: left;
   width: 316px;
   height: 180px;
@@ -316,7 +376,7 @@ header div .pc-topmenu div .topmenu .title {
   background: url(../img/main/menu/headermenu/subnav_title_bg1.jpg);
 }
 
-header div .pc-topmenu div .topmenu .submenu {
+header > #header .pc-topmenu div .topmenu .submenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,12 +387,12 @@ header div .pc-topmenu div .topmenu .submenu {
   padding: 0 70px;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub {
+header > #header .pc-topmenu div .topmenu .submenu .sub {
   width: 20%;
   margin: 0;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub h3::before {
+header > #header .pc-topmenu div .topmenu .submenu .sub h3::before {
   content: '-';
   display: inline-block;
   font-size: 19px;
@@ -340,33 +400,179 @@ header div .pc-topmenu div .topmenu .submenu .sub h3::before {
   font-weight: 500;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub h3 {
+header > #header .pc-topmenu div .topmenu .submenu .sub h3 {
   position: relative;
   padding-left: 17px;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub h3 a {
+header > #header .pc-topmenu div .topmenu .submenu .sub h3 a {
   font-size: 19px;
   color: #000;
   font-weight: normal;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub ul {
+header > #header .pc-topmenu div .topmenu .submenu .sub ul {
   padding-left: 28px;
   margin-top: 15px;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub ul li {
+header > #header .pc-topmenu div .topmenu .submenu .sub ul li {
   margin-bottom: 7px;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub ul li a {
+header > #header .pc-topmenu div .topmenu .submenu .sub ul li a {
   font-size: 16px;
   color: #888;
 }
 
-header div .pc-topmenu div .topmenu .submenu .sub ul li:hover a {
+header > #header .pc-topmenu div .topmenu .submenu .sub ul li:hover a {
   color: #03569f;
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(2) .title {
+  background: url(../img/main/menu/headermenu/subnav_title_bg2.jpg);
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(3) .title {
+  background: url(../img/main/menu/headermenu/subnav_title_bg3.jpg);
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(3) .submenu .sub {
+  width: 40%;
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(3) .submenu .sub h3::before {
+  content: none;
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(3) .submenu .sub h3 {
+  font-size: 23px;
+  color: #000;
+  font-weight: normal;
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(3) .submenu .sub .btn .btn_st2 {
+  display: inline-block;
+  margin: 5px 0 0 24px;
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(3) .submenu .sub .btn .btn_st2 svg g .btn_line1 {
+  stroke: #045c9e;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(3) .submenu .sub .btn:hover .btn_line1 {
+  -webkit-animation: btn2 2s linear;
+          animation: btn2 2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes btn2 {
+  0% {
+    stroke: #045c9e;
+    stroke-dashoffset: 1600;
+    stroke-dasharray: 1600;
+  }
+  100% {
+    stroke: #045c9e;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes btn2 {
+  0% {
+    stroke: #045c9e;
+    stroke-dashoffset: 1600;
+    stroke-dasharray: 1600;
+  }
+  100% {
+    stroke: #045c9e;
+    stroke-dashoffset: 0;
+  }
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(4) .title {
+  background: url(../img/main/menu/headermenu/subnav_title_bg4.jpg);
+}
+
+header > #header .pc-topmenu div .topmenu:nth-of-type(5) .title {
+  background: url(../img/main/menu/headermenu/subnav_title_bg5.jpg);
+}
+
+header > #header.on .head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+header > #header.on .head h1 a {
+  background: url(../img/icon/logo2.png) no-repeat;
+  background-size: cover;
+}
+
+header > #header.on .head .menucenter {
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+header > #header.on .head .menucenter .nav li a {
+  color: #111;
+}
+
+header > #header.on .head .menucenter .nav li.active {
+  -webkit-box-shadow: 0 -2px 0 #03569f inset;
+          box-shadow: 0 -2px 0 #03569f inset;
+}
+
+header > #header.on .head .menucenter .language li a {
+  color: #111;
+}
+
+header > #header.on .head .menuright .btn_menu .menu_text {
+  color: #111;
+}
+
+header > #header.on .head .menuright .btn_menu .hamburger div {
+  background: #111;
+}
+
+header > #header.bl .head {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+header > #header.bl .head h1 a {
+  background: url(../img/icon/logo2.png) no-repeat;
+  background-size: cover;
+}
+
+header > #header.bl .head .menucenter {
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+header > #header.bl .head .menucenter .nav li a {
+  color: #111;
+}
+
+header > #header.bl .head .menucenter .language li a {
+  color: #111;
+}
+
+header > #header.bl .head .menuright .btn_menu .menu_text {
+  color: #111;
+}
+
+header > #header.bl .head .menuright .btn_menu .hamburger div {
+  background: #111;
+}
+
+header > #header.all .head .menuright .btn_menu .menu_text {
+  color: #fff;
+}
+
+header > #header.all .head .menuright .btn_menu .hamburger div {
+  background: #fff;
 }
 
 footer {
@@ -1102,6 +1308,10 @@ main div .ab_con .section2 .profile .sec2_tabs a {
   line-height: 48px;
 }
 
+main div .ab_con .section2 .profile .sec2_tabs a.on {
+  color: #03569f;
+}
+
 main div .ab_con .section2 .profile .sec2_tabs a::after {
   display: block;
   content: "";
@@ -1111,6 +1321,11 @@ main div .ab_con .section2 .profile .sec2_tabs a::after {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+main div .ab_con .section2 .profile .sec2_tabs a.on::after {
+  height: 2px;
+  background: #03569f;
 }
 
 main div .ab_con .section2 .profile .sec2_tabcons .tabcon h4 {
@@ -1465,16 +1680,16 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons {
   margin-top: 30px;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 45px 0;
+  padding: 40px 0;
   height: 188px;
   background: #f6f6f6;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1483,37 +1698,38 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon d
           align-items: center;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .titarea {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list div .titarea {
   width: 205px;
   text-align: center;
   display: inline-block;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .titarea .icon {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list div .titarea .icon {
+  width: 100%;
   height: 59px;
   margin-bottom: 15px;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .titarea .tit {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list div .titarea .tit {
   font-family: "NanumSquare_acB";
   font-size: 20px;
   color: #222;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon div .con ul li {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list div .con ul li {
   margin-bottom: 0;
   padding: 0;
   font-size: 17px;
   color: #888;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(1) .titarea .icon {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(1) .titarea .icon {
   width: 100%;
   background: url(../img/aboutus/icon2/m11_1_ico1_over.png) no-repeat center;
   background-size: auto 54px;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(1) .titarea .tit {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(1) .titarea .tit {
   width: 100%;
   text-align: center;
   display: inline-block;
@@ -1524,13 +1740,13 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:n
   font-weight: bold;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(2) .titarea .icon {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(2) .titarea .icon {
   width: 100%;
   background: url(../img/aboutus/icon2/m11_1_ico2_over.png) no-repeat center;
   background-size: auto 54px;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(2) .titarea .tit {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(2) .titarea .tit {
   width: 100%;
   text-align: center;
   display: inline-block;
@@ -1541,13 +1757,13 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:n
   font-weight: bold;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(3) .titarea .icon {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(3) .titarea .icon {
   width: 100%;
   background: url(../img/aboutus/icon2/m11_1_ico3_over.png) no-repeat center;
   background-size: auto 54px;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(3) .titarea .tit {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(3) .titarea .tit {
   width: 100%;
   text-align: center;
   display: inline-block;
@@ -1558,13 +1774,13 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:n
   font-weight: bold;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(4) .titarea .icon {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(4) .titarea .icon {
   width: 100%;
   background: url(../img/aboutus/icon2/m11_1_ico4_over.png) no-repeat center;
   background-size: auto 54px;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(4) .titarea .tit {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(4) .titarea .tit {
   width: 100%;
   text-align: center;
   display: inline-block;
@@ -1575,13 +1791,13 @@ main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:n
   font-weight: bold;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(5) .titarea .icon {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(5) .titarea .icon {
   width: 100%;
   background: url(../img/aboutus/icon2/m11_1_ico5_over.png) no-repeat center;
   background-size: auto 54px;
 }
 
-main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .tabcon:nth-child(5) .titarea .tit {
+main div .ab_con .section2 .profile .sec2_tabcons .tabcon2 .bu_tabcons .list:nth-child(5) .titarea .tit {
   width: 100%;
   text-align: center;
   display: inline-block;

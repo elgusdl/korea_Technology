@@ -10,14 +10,17 @@
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/jquery-letterfx.css">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
 
     <script src="js/jquery/jquery-3.6.0.min.js"></script>
 
     <script src="js/slick.min.js"></script>
-    <script src="js/swiper.js"></script>
     <script defer src="js/jquery-letterfx.min.js"></script>
-    <script defer src="js/common.js"></script>
+    <script defer src="js/project.js"></script>
+    <script defer src="js/notice.js"></script>
     <script defer src="js/index.js"></script>
+    <script defer src="js/common.js"></script>
+
 </head>
 <body>
 
@@ -389,12 +392,12 @@
                                             <ul class="list7">
                                                 <li class="on">
                                                     <a href="#">
-                                                        도로
+                                                        도 로
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        공항
+                                                        공 항
                                                     </a>
                                                 </li>
                                                 <li>
@@ -404,22 +407,22 @@
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        철도
+                                                        철 도
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        항만
+                                                        항 만
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        구조
+                                                        구 조
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        지반
+                                                        지 반
                                                     </a>
                                                 </li>
                                             </ul>
@@ -495,7 +498,7 @@
                                             <ul class="list2">
                                                 <li>
                                                     <a href="#">
-                                                        CM
+                                                        C M
                                                     </a>
                                                 </li>
                                                 <li>
@@ -517,31 +520,29 @@
                         <h2>
                             <span>MAIN PROJECT</span>
                         </h2>
-                        <div class="pro-con">
-                            <div class="pro-txt">
-                                <ul>
-                                    <!-- <li>
-                                        <a href="#">
-                                            <figure>
-                                                <img src="img/main/project/1.jpg" alt="없엉">
-                                            </figure>
-                                            <div class="pro-g">
-                                                <div class="pro-text">
-                                                    국도77호선 여수 화태-백야 도로건설공사<br>(2공구) (T/K) 기본설계
-                                                </div>
-                                                <div class="more">
-                                                    VIEW MORE
-                                                    <span class="arr"> → </span>
-                                                </div>
+                        <div class="swiper-container pro-con swiper-container-horizontal">
+                            <div class="pro-txt swiper-wrapper">
+                                <!-- <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="img/main/project/1.jpg" alt="없엉">
+                                        </figure>
+                                        <div class="pro-g">
+                                            <div class="pro-text">
+                                                국도77호선 여수 화태-백야 도로건설공사<br>(2공구) (T/K) 기본설계
                                             </div>
-                                        </a>
-                                    </li> -->
-                                </ul>
+                                            <div class="more">
+                                                VIEW MORE
+                                                <span class="arr"> → </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div> -->
                             </div>
                         </div>
                         <div class="pro-indi">
-                            <div class="scrollbar">
-                                <div class="scrollbar-drag"></div>
+                            <div class="swiper-scrollbar1">
+                                <div class="swiper-scrollbar-drag"></div>
                             </div>
                             <div class="paging">
                                 <div class="pro-prev">
@@ -701,29 +702,27 @@
                         <h2>
                             <span>NOTICE & NEWS</span>
                         </h2>
-                        <div class="news-con">
-                            <div class="news-txt">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <div class="text">
-                                                <div class="logo">
-                                                    <span class="news-logo">NEWS</span>
-                                                </div>
-                                                <div class="news-text">한국종합기술, 건설엔지니어링업계 최초 ‘안전 보건 전담관리’ 조직 신</div>
-                                                <div class="news-date">2021.07.09</div>
+                        <div class="swiper-container news-con swiper-container-horizontal">
+                            <div class="news-txt swiper-wrapper">
+                                <!-- <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="text">
+                                            <div class="logo">
+                                                <span class="news-logo">NEWS</span>
                                             </div>
-                                            <figure>
-                                                <img src="img/main/news/1.jpeg" alt="없엉">
-                                            </figure>
-                                        </a>
-                                    </li>
-                                </ul>
+                                            <div class="news-text">한국종합기술, 건설엔지니어링업계 최초 ‘안전 보건 전담관리’ 조직 신</div>
+                                            <div class="news-date">2021.07.09</div>
+                                        </div>
+                                        <figure>
+                                            <img src="img/main/news/1.jpeg" alt="없엉">
+                                        </figure>
+                                    </a>
+                                </div> -->
                             </div>
                         </div>
                         <div class="news-indi">
-                            <div class="scrollbar">
-                                <div class="scrollbar-drag"></div>
+                            <div class="swiper-scrollbar2">
+                                <div class="swiper-scrollbar-drag"></div>
                             </div>
                             <div class="paging">
                                 <div class="news-prev">
@@ -944,8 +943,8 @@
 
     </main>
 
-
-
+    
+    <script src="js/swiper.js"></script>
 
 </body>
 </html>

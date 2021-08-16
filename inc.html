@@ -10,15 +10,15 @@
 <body>
 
     <header>
-        <div>
-            <div class="head active">
+        <div id="header">
+            <div class="head">
                 <h1>
                     <a href="index.html">로고</a>
                 </h1>
 
                 <div class="menucenter">
                     <ul class="nav">
-                        <li><a href="#">기업정보</a></li>
+                        <li><a href="aboutus.html">기업정보</a></li>
                         <li><a href="#">사업영역</a></li>
                         <li><a href="#">IR PAGE</a></li>
                         <li><a href="#">PR ROOM</a></li>
@@ -53,7 +53,7 @@
 
                 <div class="pc-allmenu">
                     <div class="allmenu">
-                        <div class="submenu">
+                        <div class="submenu on">
                             <h2>기업정보</h2>
                             <div class="sub">
                                 <div class="su">
@@ -97,7 +97,7 @@
                             <div class="sub">
                                 <div class="su">
                                     <h3>교통/인프라</h3>
-                                    <ul>
+                                    <ul class="con3">
                                         <li><a href="#">도 로</a></li>
                                         <li><a href="#">공 항</a></li>
                                         <li><a href="#">교통계획</a></li>
@@ -117,18 +117,18 @@
                                 </div>
                                 <div class="su">
                                     <h3>물/환경</h3>
-                                    <ul>
+                                    <ul class="con2">
                                         <li><a href="#">상수도</a></li>
                                         <li><a href="#">하수도</a></li>
                                         <li><a href="#">하천·수자원</a></li>
                                         <li><a href="#">댐·수력발전</a></li>
-                                        <li><a href="#">환경평가·환경관리</a></li>
+                                        <li><a href="#">환경평가·<br>환경관리</a></li>
                                     </ul>
                                 </div>
                                 <div class="su">
                                     <h3>에너지/플랜트</h3>
                                     <ul>
-                                        <li><a href="#">플랜트(산업·환경</a>)</li>
+                                        <li><a href="#">플랜트(산업·환경)</a></li>
                                         <li><a href="#">플랜트(발전·에너지)</a></li>
                                         <li><a href="#">환경(에너지)</a></li>
                                     </ul>
@@ -146,8 +146,12 @@
                             <h2>IR PAGE</h2>
                             <div class="sub">
                                 <div class="su">
-                                    <h3>종업원 지주회사로 새롭게 태어난
-                                        한국종합기술의 IR을 소개합니다.</h3>
+                                    <ul>
+                                        <li>
+                                            종업원 지주회사로 새롭게 태어난
+                                            한국종합기술의 IR을 소개합니다.
+                                        </li>
+                                    </ul>
                                     <a href="#"></a>
                                 </div>
                             </div>
@@ -206,7 +210,7 @@
 
             <div class="pc-topmenu">
                 <div>
-                    <div class="topmenu">
+                    <div class="topmenu" style="display: block;">
                         <div class="title">기업정보</div>
                         <div class="submenu">
                             <div class="sub">
@@ -254,7 +258,7 @@
                         </div>
                     </div>
 
-                    <div class="topmenu">
+                    <div class="topmenu" style="display: none;">
                         <div class="title">사업영역</div>
                         <div class="submenu">
                             <div class="sub">
@@ -313,22 +317,30 @@
                         </div>
                     </div>
 
-                    <div class="topmenu">
+                    <div class="topmenu" style="display: none;">
                         <div class="title">투자정보</div>
                         <div class="submenu">
                             <div class="sub">
                                 <h3>
-                                    <a href="#">
-                                        종업원 지주회사로 새롭게 태어난
-                                        한국종합기술의 IR을 소개합니다.
-                                    </a>
+                                    종업원 지주회사로 새롭게 태어난<br>
+                                    한국종합기술의 IR을 소개합니다.
                                 </h3>
-                                <a href="#"></a>
+                                <div class="btn">
+                                    <a class="btn_st2" href="#">
+                                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="274px" height="69px" viewBox="0 0 273.57 68.59" enable-background="new 0 0 273.57 68.59" xml:space="preserve">
+                                            <g>
+                                                <polygon fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-miterlimit="10" points="17.2,0.7 0.7,17.2 0.7,41.2 17.2,57.7 226.2,57.7 242.7,41.2 242.7,17.2 226.2,0.7 " class="btn_line1"></polygon>								
+                                            </g>
+                                            <text x="25" y="51%" fill="#03569f" font-size="15" font-family="Noto Sans KR">IR PAGE 사이트 바로가기</text>
+                                            <text x="210" y="48%" fill="#03569f" font-size="10" font-family="'Roboto'">▶</text>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="topmenu">
+                    <div class="topmenu" style="display: none;">
                         <div class="title">PR ROOM</div>
                         <div class="submenu">
                             <div class="sub">
@@ -365,7 +377,7 @@
                         </div>
                     </div>
 
-                    <div class="topmenu">
+                    <div class="topmenu" style="display: none;">
                         <div class="title">인재채용</div>
                         <div class="submenu">
                             <div class="sub">
