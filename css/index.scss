@@ -37,22 +37,27 @@ main{
                     width: 90%;
                     text-align: center;
                     .title{
+                        transform:translateY(40px);
+                        opacity:0;
                         span{
-                            transform:translateY(-100px);opacity:0;
                             font-size: 66px;
                             color: #fff;
                             font-weight: bold;
                         }
                     }
                     p{
-                        transform:translateY(-100px);opacity:0;
+                        transform: translateY(40px);
+                        opacity: 0;
                         font-size: 17px;
                         color: #fff;
                         line-height: 170%;
                         margin-top: 30px;
                     }
+
+                    // section1 팔각 svg
                     .btn_ab{
-                        transform:translateY(-100px);opacity:0;
+                        transform: translateY(40px);
+                        opacity: 0;
                         display: inline-block;
                         margin-top: 45px;
                         svg{
@@ -75,7 +80,6 @@ main{
                     }
                 }
                 .about-sl{
-                    opacity: 1;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -162,19 +166,19 @@ main{
             }
             
         }
-        .in-view #section1{
+        #section1.in-view{
             .about{
                 .backslickimg{
     
                     .photo{}
                 }
                 .text{
-                    .title{
-                        span{transform:translateY(0);opacity:1;transition:all 1s 0.2s;}
+                    .title{transform:translateY(0);opacity:1;transition:all 1s 0.2s;
+                        span{}
                     }
-                    p{transform:translateY(0);opacity:1;transition:all 1s 0.4s ;}
+                    p{transform:translateY(0);opacity:1;transition:all 1s 0.4s;}
                     .btn_ab{
-                        transform:translateY(0);opacity:1;transition:all 1s 0.6s ;
+                        transform:translateY(0);opacity:1;transition:all 1s 0.6s;
                         svg{
                             g{
                                 .btn_line1{}
@@ -773,6 +777,7 @@ main{
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            transform:translateX(450%);transform-origin:center;perspective:800px;
 
                             width: 402px;
                             margin-right: 40px;
@@ -895,6 +900,7 @@ main{
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
+                    opacity:0;
                     .swiper-scrollbar1{
                         width: calc(100% - 320px);
                         height: 4px;
@@ -953,189 +959,15 @@ main{
                     span{}
                 }
                 .pro-con{
-                    margin: 60px 0 0;
                     .pro-txt{
-                        transform: translate3d(0px, 0px, 0px);
-                        perspective: 800px;
-
-                        position: relative;
-                        width: 100%; height: 100%;
-                        z-index: 1;
-                        display: flex;
-                        box-sizing: content-box;
-                        .swiper-slide{
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-
-                            width: 402px;
-                            margin-right: 40px;
-
-                            flex-shrink: 0;
-                            height: 100%;
-                            position: relative;
-                            a{
-                                position: relative;
-                                display: block;
-                                transition: all 0.4s;
-
-                                color: #7d7d7d;
-                                text-decoration: none;
-                                cursor: pointer;
-
-                                figure::before{
-                                    display: block;
-                                    content: "";
-                                    width: 0; height: 2px;
-                                    background: #03569f;
-                                    position: absolute;
-                                    left: 0; top: 0;
-                                    z-index: 1;
-                                    transition: all 0.3s 0.3s ease-out;
-                                }
-                                figure{
-                                    overflow: hidden;
-                                    width: 100%;
-                                    img{
-                                        width: 100%;
-                                        transform: scale(1);
-                                        transition: all 0.6s;
-                                    }
-                                }
-                                figure::after{
-                                    display: block;
-                                    content: "";
-                                    width: 0; height: 2px;
-                                    background: #03569f;
-                                    position: absolute;
-                                    right: 0; bottom: 0;
-                                    z-index: 1;
-                                    transition: all 0.3s 0.3s ease-out;
-                                }
-
-                                .pro-g::before{
-                                    display: block;
-                                    content: "";
-                                    width: 2px; height: 0;
-                                    background: #03569f;
-                                    position: absolute;
-                                    left: 0; bottom: 0;
-                                    z-index: 1;
-                                    transition: all 0.3s 0.0s ease-out;
-                                }
-                                .pro-g{
-                                    box-sizing: border-box;
-                                    height: 160px;
-                                    background: #fff;
-                                    padding: 30px 30px;
-                                    text-align: left;
-                                    .pro-text{
-                                        font-family: "Noto Sans KR","돋움",dotum,sans-serif;
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                        line-height: 1.5em;
-                                        height: 3.0em;
-                                        font-size: 19px;
-                                        color: #444;
-                                        font-weight: 500;
-                                        word-break: keep-all;
-                                        margin-bottom: 20px;
-                                    }
-                                    .more{
-                                        font-family: "Montserrat";
-                                        font-size: 11px;
-                                        color: #444;
-                                        font-weight: 600;
-                                        .arr{
-                                            font-family: "Montserrat";
-                                            font-size: 11px;
-                                            color: #444;
-                                            font-weight: 600;
-                                            text-align: left;
-                                        }
-                                    }
-                                }
-                                .pro-g::after{
-                                    display: block;
-                                    content: "";
-                                    width: 2px; height: 0;
-                                    background: #03569f;
-                                    position: absolute;
-                                    right: 0; top: 0;
-                                    z-index: 1;
-                                    transition: all 0.3s ease-out;
-                                }
-                            }
-                            a:hover figure::before{width:100%;transition:all 0.3s 0s ease-out;}
-                            a:hover figure::after{width:100%;transition:all 0.3s 0s ease-out;}
-                            a:hover .pro-g::before{height:100%;transition:all 0.3s 0.3s ease-out;}
-                            a:hover .pro-g::after{height:100%;transition:all 0.3s 0.3s ease-out;}
-                            a:hover .more{color: #03569f;}
-                            a:hover .more > .arr{
-                                color: #03569f;
-                                display:inline-block; animation:arr_ani1 0.4s linear infinite alternate;
-                            }
-                            @keyframes arr_ani1{
-                                0%{transform:translateX(0px);}
-                                100%{transform:translateX(3px);}
-                            }
-                            a:hover figure > img{transform:scale(1.05);}
-                            a:hover{transform:translateZ(0px);box-shadow:3px 3px 5px rgba(0,0,0,0.4);}
-                        }
+                        .swiper-slide{transform:translateX(0);}
+                        .swiper-slide:nth-child(1){opacity:1;transform:translateX(0);transition:all 1s cubic-bezier(.08,1.01,.85,.98) 1s;}
+                        .swiper-slide:nth-child(2){opacity:1;transform:translateX(0);transition:all 1s cubic-bezier(.08,1.01,.85,.98) 1.1s;}
+                        .swiper-slide:nth-child(3){opacity:1;transform:translateX(0);transition:all 1.1s cubic-bezier(.08,1.01,.85,.98) 1.2s;}
+                        .swiper-slide:nth-child(4){opacity:1;transform:translateX(0);transition:all 1.2s cubic-bezier(.08,1.01,.85,.98) 1.3s;}
                     }
                 }
-                .pro-indi{
-                    margin-top: 100px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                    .swiper-scrollbar1{
-                        width: calc(100% - 320px);
-                        height: 4px;
-                        box-shadow: 0 -1px 0 #c6c6c6 inset;
-                        .swiper-scrollbar-drag{
-                            width: 291.101px;
-                            transform: translate3d(0px, 0px, 0px);
-                            background: #03569f;
-                            border-radius: 0;
-                            height: 100%;
-                            position: relative;
-                            left: 0; top: 0;
-                        }
-                    }
-                    .paging{
-                        box-sizing: border-box;
-                        width: 320px;
-                        .pro-prev{
-                            display: inline-block;
-                            position: relative;
-                            outline: 0;
-                            box-sizing: border-box;
-                            width: 60px; height: 60px;
-                            cursor: pointer;
-                            svg{
-                                g{
-                                    .line_prev{transition:all 0.6s;transform-origin:center;}
-                                }
-                            }
-                        }
-                        .pro-prev:hover .line_prev{transform:rotateZ(-23deg);}
-                        .pro-next{
-                            display: inline-block;
-                            position: relative;
-                            outline: 0;
-                            box-sizing: border-box;
-                            width: 60px; height: 60px;
-                            cursor: pointer;
-                            svg{
-                                g{
-                                    .line_next{transition:all 0.6s;transform-origin:center;}
-                                }
-                            }
-                        }
-                        .pro-next:hover .line_next{transform:rotateZ(23deg);}
-                    }
-                }
+                .pro-indi{opacity:1;transition:all 1s 2.8s;}
             }
         }
         #section3::after{
@@ -1265,7 +1097,7 @@ main{
                                         height: 53px;
                                         margin-bottom: 30px;
                                         opacity:0;
-                                        svg{stroke-dashoffset:400; stroke-dasharray:400;}
+                                        svg *{stroke-dashoffset:400; stroke-dasharray:400;}
                                     }
                                     .tit{transform:translateY(30px);opacity:0;}
                                 }
@@ -1339,7 +1171,7 @@ main{
                                 dt{
                                     .icon{
                                         opacity:1; transition:2s 1.4s;
-                                        svg{stroke-dashoffset:0; stroke-dasharray:400;}
+                                        svg *{stroke-dashoffset:0; stroke-dasharray:400;}
                                     }
                                     .tit{transform:translateY(0);opacity:1;transition:all 1s 3s;}
                                 }
@@ -1377,6 +1209,7 @@ main{
                 padding: 0 5% 0;
                 h2{
                     margin-top: 85px;
+                    opacity:0;transform:translateY(60px);
                     span{
                         display: inline-block;
                         line-height: 100%;
@@ -1405,6 +1238,7 @@ main{
                         .swiper-slide{
                             width: 384.75px;
                             margin-right: 63px;
+                            transform:translateY(150%);transform-origin:center;perspective:800px;
                             a{
                                 position: relative;
                                 display: block;
@@ -1521,6 +1355,7 @@ main{
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
+                    opacity:0;
                     .swiper-scrollbar2{
                         width: calc(100% - 320px);
                         height: 4px;
@@ -1570,6 +1405,21 @@ main{
                         .news-next:hover .line_next{transform:rotateZ(23deg);}
                     }
                 }
+            }
+        }
+        #section5.active{
+            .news{
+                h2{opacity:1;transform:translateY(0px);transition:all 1s 1s;}
+                .news-con{
+                    .news-txt{
+                        .swiper-slide{opacity:1;transform:translateY(0);}
+                        .swiper-slide:nth-child(1){opacity:1;transform:translateY(0);transition:all 1s cubic-bezier(.08,1.01,.85,.98) 1s;}
+                        .swiper-slide:nth-child(2){opacity:1;transform:translateY(0);transition:all 1s cubic-bezier(.08,1.01,.85,.98) 1.1s;}
+                        .swiper-slide:nth-child(3){opacity:1;transform:translateY(0);transition:all 1.1s cubic-bezier(.08,1.01,.85,.98) 1.2s;}
+                        .swiper-slide:nth-child(4){opacity:1;transform:translateY(0);transition:all 1.2s cubic-bezier(.08,1.01,.85,.98) 1.3s;}
+                    }
+                }
+                .news-indi{opacity:1;transition:all 1s 2.8s;}
             }
         }
         
@@ -1746,11 +1596,54 @@ main{
                                     .bg{
                                         opacity: 0.5;
                                         transform-origin: center;
+                                        svg{
+                                            .bg{
+                                                opacity: 0.5;
+                                                transform-origin: center;
+                                            }
+                                        }
                                     }
                                     .icon{
                                         position: absolute;
                                         left: 50%; top: 50%;
                                         transform: translate(-50%,-50%);
+                                        svg{
+                                            g{
+                                                .line0{
+                                                    stroke-dashoffset: 250;
+                                                    stroke-dasharray: 250;
+                                                }
+                                                .c1{
+                                                    stroke-dashoffset: 50;
+                                                    stroke-dasharray: 50;
+                                                }
+                                                .c2{
+                                                    stroke-dashoffset: 50;
+                                                    stroke-dasharray: 50;
+                                                }
+                                                .c3{
+                                                    stroke-dashoffset: 50;
+                                                    stroke-dasharray: 50;
+                                                }
+                                                .c4{
+                                                    stroke-dashoffset: 50;
+                                                    stroke-dasharray: 50;
+                                                }
+                                                .line1{
+                                                    stroke-dashoffset: 50;
+                                                    stroke-dasharray: 50;
+                                                }
+                                                .line2{
+                                                    stroke-dashoffset: 50;
+                                                    stroke-dasharray: 50;
+                                                }
+                                                .line3{
+                                                    stroke-dashoffset: 50;
+                                                    stroke-dasharray: 50;
+                                                }
+                                                
+                                            }
+                                        }
                                     }
                                 }
                                 .txts{
@@ -1782,6 +1675,7 @@ main{
                                                 .num{
                                                     font-family: "Montserrat";
                                                     color: #00a1e4;
+                                                    transition:updown1 1s;
                                                 }
                                             }
                                             .updown{
@@ -1892,7 +1786,45 @@ main{
                                 opacity:1;transition:all 1s 0.5s;
                                 .mi-img{
                                     .bg{}
-                                    .icon{}
+                                    .icon{
+                                        svg{
+                                            g{
+                                                .line0{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 1s linear 1s;
+                                                }
+                                                .c1{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 0.6s linear 1.5s;
+                                                }
+                                                .c2{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 0.6s linear 1.5s;
+                                                }
+                                                .c3{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 0.6s linear 1.5s;
+                                                }
+                                                .c4{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 0.6s linear 1.5s;
+                                                }
+                                                .line1{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 0.6s linear 1.7s;
+                                                }
+                                                .line2{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 0.6s linear 1.7s;
+                                                }
+                                                .line3{
+                                                    stroke-dashoffset: 0;
+                                                    transition: all 0.6s linear 1.7s;
+                                                }
+                                                
+                                            }
+                                        }
+                                    }
                                 }
                                 .txts{
                                     h2{

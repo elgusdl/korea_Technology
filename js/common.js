@@ -66,7 +66,7 @@ $(function(){
 
 
 
-        // section scroll
+        // section3/5번 헤더컬러변경
         let len = $('.section').length;
         let delta, num = 0, move, slide;
         $(window).on('mousewheel DOMMouseScroll',function(e){
@@ -84,68 +84,14 @@ $(function(){
         });
         //wheel end
         function ani(){
-            if(num == 3){
+            if(num == 2 || num == 4){
                 slide=$('#section3').position().top;
-                $('#header').addClass('bl');
-                //$('.section').removeClass('in-view').eq(num).addClass('in-view');
-                // $('.indi a').removeClass('active')
-                // $('.indi a').eq(num).addClass('active')
+                slide=$('#section5').position().top;
+                $('#header').addClass('on');
             }else{
-                $('#header').removeClass('bl');
+                $('#header').removeClass('on');
             }
-                // slide = $('.section').eq(num).position().top - ($(window).height() - $('.section').eq(num).height());
-            // }
-            // $('.contents').css({ 
-            //     transform : `translateY(-${slide}px)`
-            // });
-            
         };
-        // $('.indi a').on('click',function(){
-        //     num = $(this).index();
-        //     ani();
-        // });
-
+        ani();
     }
-
-
-  
-	
-
-
-
-	// $(".btn_top").click(function(){
-	// 	$('body,html').animate({scrollTop: 0}, 300);
-	// })
-
-
-
-	// $(".btn_x").click(function(){
-	// 	$("#bgblack").hide();
-	// 	$(".pop_st1").hide();
-	// 	$(".pop_form").hide();
-	// 	$(".history_pop").hide();
-	// 	$.fn.fullpage.setAllowScrolling(true);
-	// })
-	// $(".foot_pop").click(function(){
-	// 	var popNum = $(".foot_pop").index($(this));
-	// 	$("#bgblack").show();
-	// 	$(".pop_st1").show();
-	// 	$(".pop_st1 .conwrap>div").hide();
-	// 	$(".pop_st1 .conwrap>div:eq("+popNum+")").show();
-	// 	$.fn.fullpage.setAllowScrolling(false);
-	// })
-	// $(".btn_form").click(function(){
-	// 	$("#bgblack").show();
-	// 	$(".pop_form").show();
-	// 	$.fn.fullpage.setAllowScrolling(false);
-	// })
-
-
-
-
-    
-
-    
-
-
 });

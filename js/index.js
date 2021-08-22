@@ -13,36 +13,67 @@ $(function(){
             }else{
                 if(num > 0) num--;   //up
             }
-            ani();
+            section_move();
         },100);
     });
     //wheel end
-    function ani(){
+    $('#section1').addClass('in-view');
+    function section_move(){
         if(num < 7){
             slide=$('.section').eq(num).position().top ;
             $('.section').removeClass('active').eq(num).addClass('active');
             $('.section').removeClass('in-view').eq(num).addClass('in-view');
-            $('.indi a').removeClass('active')
-            $('.indi a').eq(num).addClass('active')
+            $('.indi a').removeClass('active');
+            $('.indi a').eq(num).addClass('active');
         }else{
             slide = $('.section').eq(num).position().top - ($(window).height() - $('.section').eq(num).height());
+        }
+        if(num == 7){
+            $('.indi a').removeClass('active');
         }
         $('.contents').css({ 
             transform : `translateY(-${slide}px)`
         });
         
     };
-    $('.indi a').on('click',function(){
+    
+
+    // 인디게이터 클릭
+    $('.indi ul li').on('click',function(){
         num = $(this).index();
-        ani();
+        section_move();
     });
-	
+
+
+
+
+    
+
+    // count
+    $(function() {
+        let count0 = 8000;
+        counterFn();
+
+        function counterFn() {
+          id0 = setInterval(count0Fn, 10);
+          function count0Fn() {
+            count0++;
+            if (count0 > 8830) {
+              clearInterval(id0);
+            } else {
+              $(".today .num").text(count0.toLocaleString("ko-KR"));
+            }
+          }
+        }
+    });
+
+
 
 
 
 
     //메인 포토
-    $('.photo').slick({       
+    $('.photo').slick({
         speed: 1000,
         dots: true,
         infinite: true,
@@ -79,11 +110,6 @@ $(function(){
 	},function(){
 		$(".brochure .mb-img").removeClass("on");
 	})
-
-
-
-
-
 
 
 });
