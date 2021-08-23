@@ -50,8 +50,16 @@ $(function(){
     
 
     // count
+    let blen = true;
+    $(window).on('scroll',function(){
+        if($('#section6')){
+             blen = false;
+        };
+    });
+ 
+    // count
     $(function() {
-        let count0 = 8000;
+        let count0 = 3000;
         counterFn();
 
         function counterFn() {

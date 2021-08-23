@@ -1096,7 +1096,7 @@ main{
                                     .icon{
                                         height: 53px;
                                         margin-bottom: 30px;
-                                        opacity:0;
+                                        opacity:0; transition: 0.5s;
                                         svg *{stroke-dashoffset:400; stroke-dasharray:400;}
                                     }
                                     .tit{transform:translateY(30px);opacity:0;}
@@ -1173,9 +1173,9 @@ main{
                                         opacity:1; transition:2s 1.4s;
                                         svg *{stroke-dashoffset:0; stroke-dasharray:400;}
                                     }
-                                    .tit{transform:translateY(0);opacity:1;transition:all 1s 3s;}
+                                    .tit{transform:translateY(0); opacity:1; transition:all 1s 3s;}
                                 }
-                                dd{transform:translateY(0);opacity:1;transition:all 1s 3.2s;}
+                                dd{transform:translateY(0); opacity:1; transition:all 1s 3.2s;}
                             }
                         }
                     }
@@ -1795,31 +1795,31 @@ main{
                                                 }
                                                 .c1{
                                                     stroke-dashoffset: 0;
-                                                    transition: all 0.6s linear 1.5s;
+                                                    transition: all 1s linear 1.3s;
                                                 }
                                                 .c2{
                                                     stroke-dashoffset: 0;
-                                                    transition: all 0.6s linear 1.5s;
+                                                    transition: all 1s linear 1.9s;
                                                 }
                                                 .c3{
                                                     stroke-dashoffset: 0;
-                                                    transition: all 0.6s linear 1.5s;
+                                                    transition: all 1s linear 2.5s;
                                                 }
                                                 .c4{
                                                     stroke-dashoffset: 0;
-                                                    transition: all 0.6s linear 1.5s;
+                                                    transition: all 1s linear 3.1s;
                                                 }
                                                 .line1{
                                                     stroke-dashoffset: 0;
-                                                    transition: all 0.6s linear 1.7s;
+                                                    transition: all 1s linear 1.6s;
                                                 }
                                                 .line2{
                                                     stroke-dashoffset: 0;
-                                                    transition: all 0.6s linear 1.7s;
+                                                    transition: all 1s linear 2.2s;
                                                 }
                                                 .line3{
                                                     stroke-dashoffset: 0;
-                                                    transition: all 0.6s linear 1.7s;
+                                                    transition: all 1s linear 2.8s;
                                                 }
                                                 
                                             }

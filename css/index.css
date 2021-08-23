@@ -2721,6 +2721,8 @@ main {
   height: 53px;
   margin-bottom: 30px;
   opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .contents .page .section .corporate .cor-con .cor-text .list dl dt .icon svg * {
@@ -3780,44 +3782,44 @@ main {
 
 .contents .page #section6.in-view .media .media-con .con-right .ir div .mi-img .icon svg g .c1 {
   stroke-dashoffset: 0;
-  -webkit-transition: all 0.6s linear 1.5s;
-  transition: all 0.6s linear 1.5s;
+  -webkit-transition: all 1s linear 1.3s;
+  transition: all 1s linear 1.3s;
 }
 
 .contents .page #section6.in-view .media .media-con .con-right .ir div .mi-img .icon svg g .c2 {
   stroke-dashoffset: 0;
-  -webkit-transition: all 0.6s linear 1.5s;
-  transition: all 0.6s linear 1.5s;
+  -webkit-transition: all 1s linear 1.9s;
+  transition: all 1s linear 1.9s;
 }
 
 .contents .page #section6.in-view .media .media-con .con-right .ir div .mi-img .icon svg g .c3 {
   stroke-dashoffset: 0;
-  -webkit-transition: all 0.6s linear 1.5s;
-  transition: all 0.6s linear 1.5s;
+  -webkit-transition: all 1s linear 2.5s;
+  transition: all 1s linear 2.5s;
 }
 
 .contents .page #section6.in-view .media .media-con .con-right .ir div .mi-img .icon svg g .c4 {
   stroke-dashoffset: 0;
-  -webkit-transition: all 0.6s linear 1.5s;
-  transition: all 0.6s linear 1.5s;
+  -webkit-transition: all 1s linear 3.1s;
+  transition: all 1s linear 3.1s;
 }
 
 .contents .page #section6.in-view .media .media-con .con-right .ir div .mi-img .icon svg g .line1 {
   stroke-dashoffset: 0;
-  -webkit-transition: all 0.6s linear 1.7s;
-  transition: all 0.6s linear 1.7s;
+  -webkit-transition: all 1s linear 1.6s;
+  transition: all 1s linear 1.6s;
 }
 
 .contents .page #section6.in-view .media .media-con .con-right .ir div .mi-img .icon svg g .line2 {
   stroke-dashoffset: 0;
-  -webkit-transition: all 0.6s linear 1.7s;
-  transition: all 0.6s linear 1.7s;
+  -webkit-transition: all 1s linear 2.2s;
+  transition: all 1s linear 2.2s;
 }
 
 .contents .page #section6.in-view .media .media-con .con-right .ir div .mi-img .icon svg g .line3 {
   stroke-dashoffset: 0;
-  -webkit-transition: all 0.6s linear 1.7s;
-  transition: all 0.6s linear 1.7s;
+  -webkit-transition: all 1s linear 2.8s;
+  transition: all 1s linear 2.8s;
 }
 
 .contents .page #section6.active .media .media-con {
