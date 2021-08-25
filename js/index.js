@@ -31,12 +31,18 @@ $(function(){
         if(num == 7){
             $('.indi a').removeClass('active');
         }
-        $('.contents').css({ 
-            transform : `translateY(-${slide}px)`
-        });
-        
+        $('.contents').css({transform : `translateY(-${slide}px)`});
+    };
+
+    function appear(){
+        if($('#section1').addClass('in-view')){
+            $('.indi').addClass('in-view');
+        }
     };
     
+
+
+
 
     // 인디게이터 클릭
     $('.indi ul li').on('click',function(){
@@ -47,15 +53,7 @@ $(function(){
 
 
 
-    
 
-    // count
-    let blen = true;
-    $(window).on('scroll',function(){
-        if($('#section6')){
-             blen = false;
-        };
-    });
  
     // count
     $(function() {
